@@ -1,4 +1,4 @@
-with open('/Users/lehoangsang/coding/AI_KnapSack/INPUT_1.txt', 'r') as f:
+with open('/Users/lehoangsang/coding/Knapsack_Problem_AI/INPUT_1.txt', 'r') as f:
     lines = f.readlines()
 
 n = int(lines[0])
