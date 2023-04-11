@@ -1,9 +1,8 @@
 from queue import PriorityQueue
 
 class Node:
-    """
-    A node in the branch and bound search tree.
-    """
+    # A node in the branch and bound search tree.
+
     def __init__(self, level, value, weight, bound, included_items):
         self.level = level
         self.value = value
@@ -16,8 +15,8 @@ class Node:
 
 def bound(node, n, capacity, values, weights):
     """
-    Calculate the upper bound on the maximum value that can be obtained by including items 
-    in the knapsack starting from the current node.
+        Calculate the upper bound on the maximum value that can be obtained by including items 
+        in the knapsack starting from the current node.
     """
     if node.weight >= capacity:
         return 0
@@ -37,8 +36,8 @@ def bound(node, n, capacity, values, weights):
 
 def branch_and_bound(n, capacity, values, weights):
     """
-    Solve the knapsack problem using branch and bound search.
-    Returns the maximum value that can be obtained by including items in the knapsack.
+        Solve the knapsack problem using branch and bound search.
+        Returns the maximum value that can be obtained by including items in the knapsack.
     """
     q = PriorityQueue()
     root = Node(-1, 0, 0, 0, [])
