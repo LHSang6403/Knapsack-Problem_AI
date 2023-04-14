@@ -1,9 +1,10 @@
 import numpy as np
+import itertools
 
 # === Tính toán giá trị của một giải pháp ===
 # + Nếu tổng trọng lượng các item lớn hơn trọng lượng của Knapsack:
 #    => Thì giải pháp không hợp lệ và trả về -1.
-# + Nếu mỗi loại item đều có ít nhất một item được chọn:
+# + Nếu mỗi loại item đều không có ít nhất một item được chọn:
 #    => Thì trả về -1.
 # + Nếu giải pháp hợp lệ:
 #    => Thì trả về tổng giá trị của các item được chọn.
@@ -33,11 +34,16 @@ def generate_initial_states(n, k):
         states[i] = np.random.randint(2, size=n)
     return states
 
+def generate_all_states(n, k):
+    all_states = np.array(list(itertools.product([0, 1], repeat=n)))
+    return all_states[:k]
+
 # === Tạo ra các trạng thái con ===
 # Bằng cách đảo ngược một số bit trong trạng thái đầu vào.
 # Tổng số trạng thái con là n*k.
 
 # generate descendant states by flipping some bits
+
 
 
 def generate_descendants(states, n, k):
@@ -70,6 +76,8 @@ def select_best_states(W, w, v, c, states, k):
 def local_beam_search(W, m, w, v, c, k, max_iter):
     n = len(w)  # Get the size of w
     states = generate_initial_states(n, k)
+    # states = np.zeros(n, dtype=int)
+    # states = generate_all_states(n, k)
     best_state = np.zeros(n, dtype=int)
     best_val = -1
     for iter in range(max_iter):
