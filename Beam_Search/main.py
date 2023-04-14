@@ -1,10 +1,10 @@
 import numpy as np
 import os
 
-from DoFile import (
-    read_input,
-    write_output,
-)
+import sys
+sys.path.append('D:\CODE\Github\Knapsack_Problem_AI')
+
+from DoFile import*
 
 from Beam_Search import (
     local_beam_search
@@ -15,7 +15,7 @@ from Beam_Search import (
 
 def main():
     # Read input data
-    input_file = 'D:\CODE\Python\Knap-Sack_Problem\INPUT_1.txt'
+    input_file = 'D:\CODE\Github\Knapsack_Problem_AI\INPUT_1.txt'
     knapsack_capacity, num_classes, weights, values, class_labels = read_input(
         input_file)
 
@@ -28,7 +28,7 @@ def main():
         knapsack_capacity, num_classes, weights, values, class_labels, beam_width, max_iter)
 
     # Write output data
-    output_file = 'D:\CODE\Python\Knap-Sack_Problem\OUTPUT_1.txt'
+    output_file = 'D:\CODE\Github\Knapsack_Problem_AI\Beam_Search\OUTPUT_1.txt'
     write_output(output_file, best_value, best_solution)
 
 

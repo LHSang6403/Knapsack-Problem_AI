@@ -1,3 +1,10 @@
+
+# Để import module này cần sử dụng lệnh này vào file main:
+# import sys
+# sys.path.append('đường_dẫn_tới_thư_mục_chứa_file_này') 
+# ví dụ: import sys
+# sys.path.append('D:\CODE\Github\Knapsack_Problem_AI')
+
 import numpy as np
 import os
 
