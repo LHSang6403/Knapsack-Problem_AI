@@ -18,7 +18,7 @@ import os
 
 def main():
     # Read input data
-    input_file = current_directory + '\INPUT_2.txt'
+    input_file = current_directory + '\INPUT_4.txt'
     knapsack_capacity, num_classes, weights, values, class_labels = read_input(
         input_file)
 
@@ -31,7 +31,7 @@ def main():
         knapsack_capacity, num_classes, weights, values, class_labels, beam_width, max_iter)
 
     # Write output data
-    output_file = current_directory + '\Beam_Search\OUTPUT_2.txt'
+    output_file = current_directory + '\Beam_Search\OUTPUT_4.txt'
     write_output(output_file, best_value, best_solution)
 
     print("\nBeam search finished")
