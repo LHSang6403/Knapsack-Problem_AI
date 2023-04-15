@@ -18,20 +18,20 @@ import os
 
 def main():
     # Read input data
-    input_file = current_directory + '\INPUT_4.txt'
+    input_file = current_directory + '\INPUT_3.txt'
     knapsack_capacity, num_classes, weights, values, class_labels = read_input(
         input_file)
 
     # Set algorithm parameters
     beam_width = 100
-    max_iter = 2000
+    max_iter = 1000
 
     # Solve knapsack problem using local beam search
     best_value, best_solution = local_beam_search(
         knapsack_capacity, num_classes, weights, values, class_labels, beam_width, max_iter)
 
     # Write output data
-    output_file = current_directory + '\Beam_Search\OUTPUT_4.txt'
+    output_file = current_directory + '\Beam_Search\OUTPUT_3.txt'
     write_output(output_file, best_value, best_solution)
 
     print("\nBeam search finished")
