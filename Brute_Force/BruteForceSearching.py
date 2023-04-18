@@ -14,7 +14,7 @@ def brute_force(W, m, wt, v, c):
         count_class[:] = [0 for i in count_class]
         value = 0
         weight = 0
-        for i in range(len(c)):
+        for i in range(len(temp)):
             if weight > W:
                 break
             value += temp[i] * v[i]
