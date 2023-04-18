@@ -10,9 +10,7 @@ def brute_force(W, m, wt, v, c):
     count_class = [0 for i in range(m)]
     chosen = [0 for i in range(n)]
     all_combinations = [[0,1] for i in range(n)]
-    check_count = True
     for temp in itertools.product(*all_combinations):
-        check_count = True
         count_class[:] = [0 for i in count_class]
         value = 0
         weight = 0
