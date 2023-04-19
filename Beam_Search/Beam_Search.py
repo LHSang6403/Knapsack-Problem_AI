@@ -1,32 +1,28 @@
 import numpy as np
 import itertools
 
-# === Tính toán giá trị của một giải pháp ===
-# + Nếu tổng trọng lượng các item lớn hơn trọng lượng của Knapsack:
-#    => Thì giải pháp không hợp lệ và trả về 0.
-# + Nếu mỗi loại item đều không có ít nhất một item được chọn:
-#    => Thì trả về 0.
-# + Nếu giải pháp hợp lệ:
-#    => Thì trả về tổng giá trị của các item được chọn.
+# === Calculating the value of a state ===
+# If the total weight of the items is greater than the capacity of the Knapsack:
+#   => Then the solution is invalid and returns 0.
+# If the solution is valid:
+#   => Then returns the total value of the selected items.
 
 # evaluate a solution
-
 
 def evaluate_solution(W, w, v, c, x):
     if np.sum(w * x) > W:
         return 0  # invalid solution
     val = np.sum(v * x)
-    for j in range(1, c.max()+1):
-        if np.sum(v[c == j] * x[c == j]) == 0:
-            # invalid solution (at least one item from each class must be selected)
-            return 0
     return val
 
- # === Tạo ra k trạng thái ban đầu ngẫu nhiên ===
- # Mỗi trạng thái là một vector n phần tử với các giá trị 0 hoặc 1.
+# === Generate k random initial states ===
+# Each state randomly selects an item from each class
+# Make sure each class has at least 1 item according to the problem requirement
+# The return result is a numpy matrix with:
+# + k rows and n columns
+# + Where n is the number of items.
 
 # generate initial states (randomly)
-
 
 def generate_initial_states(n, k, c):
     states = np.zeros((k, n), dtype=int)
@@ -40,29 +36,37 @@ def generate_initial_states(n, k, c):
             states[i][random_item] = 1
     return states
 
-# === Tạo ra các trạng thái con ===
-# Bằng cách đảo ngược một số bit trong trạng thái đầu vào.
-# Tổng số trạng thái con là n*k.
+# === Generate substates of all current states ===
+# By inverting some bits in the input state.
+# The total number of substates is n*k.
+# This function returns a 2D numpy array
 
 # generate descendant states by flipping some bits
 
-
-
 def generate_descendants(states, weights, capacity, n, k):
-    descendants = np.zeros((k*n, n), dtype=int)
+    # set a matrix of descendant state with k*n row and n column
+    descendants = np.zeros((k*n, n), dtype=int) 
+    # with every parent state out of k parent states
     for i in range(k):
+        # with every descendant state in parent state
         for j in range(n):
-            descendants[i*n+j] = np.copy(states[i])
+            # Copy the parent state to i*n+j descendant state
+            descendants[i*n+j] = np.copy(states[i]) 
+            # Invert the value of item j in the i*n+j .th descendant state
             descendants[i*n+j, j] = 1 - descendants[i*n+j, j]
             if np.dot(descendants[i*n+j], weights) > capacity:
                 descendants[i*n+j, j] = 1 - descendants[i*n+j, j]
     return descendants
 
-# === Chọn k trạng thái tốt nhất dựa trên hàm mục tiêu ===
-# Hàm mục tiêu ở đây là giá trị của giải pháp.
+# === Choose the best k states from a set of states ===
+# The objective function here is the value of the solution.
+# To select the best state, this function uses the evaluate_solution function:
+# + Calculate the value of each state
+# + Sort the states in descending order of this value.
+# + Finally, the function returns k best states.
+
 
 # select the best k states according to the objective function
-
 
 def select_best_states(W, w, v, c, states, k):
     values = np.zeros(k)
@@ -73,11 +77,20 @@ def select_best_states(W, w, v, c, states, k):
     return best_states
 
 
-# === Thực hiện thuật toán tìm kiếm địa phương Beam Search ===
-# Hàm trả về giá trị và trạng thái của giải pháp tốt nhất tìm được.
+# === Implement Beam Search Local Algorithm ===
+# The function returns the value and status of the best solution found.
+
+# Start state is generated using generate_initial_states function,
+# Then proceed to generate all substates by
+# + Use generate_descendants function.
+# Of the generated sub-states, only the best k can be extracted by
+# + Use select_best_states function.
+# + If the best state found by this method is better than the current best state
+# => We update the current best state and optimal value.
+# => This process is repeated until no further improvement is possible.
+# The final result returned is the optimal value and the state corresponding to that optimal value.
 
 # local beam search algorithm
-
 
 def local_beam_search(W, m, w, v, c, k):
     n = len(w)  # Get the size of w
