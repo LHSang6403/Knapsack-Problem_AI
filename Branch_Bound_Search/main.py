@@ -1,13 +1,18 @@
 import ReadInput as RI
 import os
+import sys
 import BranchBoundSearching
 
 def main():
     current_dir = os.getcwd()
+    sys.path.append(current_dir)
     input_file = os.path.join(current_dir, 'INPUT_1.txt')
-    #print(input_file)
+    #output_file = os.path.join(current_dir, 'Branch_Bound_Search')
+    output_file = os.path.join(current_dir, 'OUTPUT_1.txt')
+
     n, k, arr = RI.ReadInput(input_file)
 
-    print(BranchBoundSearching.branch_and_bound(n, arr[0], arr[1]))
+    BNB = BranchBoundSearching.Problem(input_file, output_file)
+    BNB.SolveKnapsackUsingBNB()
 
 main()
