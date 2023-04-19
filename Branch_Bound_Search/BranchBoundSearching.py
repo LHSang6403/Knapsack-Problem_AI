@@ -1,4 +1,7 @@
 import numpy as np
+import os
+import sys
+sys.setrecursionlimit(10000)
 
 class Node:
     def __init__(self, weight, value, delta, index):
