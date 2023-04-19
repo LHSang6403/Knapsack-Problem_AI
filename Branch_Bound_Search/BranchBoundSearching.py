@@ -1,7 +1,4 @@
 import numpy as np
-import time
-import os
-import tracemalloc
 
 class Node:
     def __init__(self, weight, value, delta, index):
@@ -12,7 +9,7 @@ class Node:
     def __lt__(self, node):
         return self._delta > node._delta
 
-class Solving:
+class Problem:
     def __init__(self, fileInput, fileOutput):
         self._maxVal = 0
         self._answer = []
@@ -39,7 +36,7 @@ class Solving:
             self._data.append(node)
         self._data = np.sort(self._data)
 
-    def PrintResult(self):
+    def GetResult(self):
         output_file = open(f"{self._fileOutput}", "w")
         output_file.write(f"{self._maxVal}\n")
         if self._maxVal == 0:
@@ -50,9 +47,13 @@ class Solving:
 
     def SolveKnapsackUsingBNB(self):
         self.GetData()
+
+        # This code initializes a 1D numpy array arr with zeros
+        # The length of the array is set to the number of items in self._data
         arr = np.array([0] * len(self._data))
+
         self.BranchAndBound(self._data, arr, 0, 0, self._capacity)
-        self.PrintResult()
+        self.GetResult()
 
     def CopyArray(self, arr):
         other = []
@@ -62,7 +63,13 @@ class Solving:
 
     def checkClass(self, arr):
         classExist = []
+
+        #The np.where() function returns the indices of elements in an array 
+        # that meet a certain condition
+        #In this case, it returns a tuple containing an array temp that 
+        # holds the indices where the values in arr are equal to 1
         temp = np.where(arr == 1)
+
         for i in temp[0]:
             classExist.append(self._classLabel[i])
         for i in range(self._numOfClass):
@@ -70,13 +77,21 @@ class Solving:
                 return False
         return True
 
+# nodes: a list of Node objects representing the items in the knapsack problem
+# arr: a binary array indicating which items are currently in the knapsack (1 for in, 0 for out)
+# id: the index of the current node being considered
+# curVal: the current value of the items in the knapsack
+# Formula: g = v + w(vi+1 / wi+1)
     def BranchAndBound(self, nodes, arr, id, curVal, curWeight):
         i = 1
         while i >= 0:
             arr[nodes[id]._index] = i
+
+            ## Total value of the knapsack after considering the current node
             curV = curVal + nodes[id]._value * i
             curW = curWeight - nodes[id]._weight * i
-            if id == len(self._data) - 1:
+
+            if id == len(self._data) - 1: # case last node
                 if i == 1:
                     if curW >= 0:
                         if curV > self._maxVal and self.checkClass(arr):
@@ -94,7 +109,7 @@ class Solving:
                     if curW >= 0 and g > self._maxVal:
                         self.BranchAndBound(nodes, arr, id + 1, curV, curW)
                 else:
-                    if g > self._maxVal:
+                    if g > self._maxVal: # valid route
                         self.BranchAndBound(nodes, arr, id + 1, curV, curW)
                     return
             i -= 1
