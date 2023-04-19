@@ -1,5 +1,6 @@
 import os
 import sys
+import random
 
 current_directory = os.getcwd()
 sys.path.append(current_directory)
@@ -23,13 +24,9 @@ def main():
         input_file)
 
     # Set algorithm parameters
-    beam_width = 100
-    max_iter = 1000
-
+    beam_width = 5000
     # Solve knapsack problem using local beam search
-    best_value, best_solution = local_beam_search(
-        knapsack_capacity, num_classes, weights, values, class_labels, beam_width, max_iter)
-
+    best_value, best_solution = local_beam_search(knapsack_capacity, num_classes, weights, values, class_labels, beam_width)
     # Write output data
     output_file = os.path.join(current_directory, "Beam_Search", "OUTPUT_3.txt")
     write_output(output_file, best_value, best_solution)
