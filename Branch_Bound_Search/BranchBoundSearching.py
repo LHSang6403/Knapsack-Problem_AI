@@ -1,67 +1,100 @@
-from queue import PriorityQueue
+import numpy as np
+import time
+import os
+import tracemalloc
 
 class Node:
-    # A node in the branch and bound search tree.
+    def __init__(self, weight, value, delta, index):
+        self._weight = weight
+        self._value = value
+        self._delta = delta
+        self._index = index
+    def __lt__(self, node):
+        return self._delta > node._delta
 
-    def __init__(self, level, value, weight, bound, included_items):
-        self.level = level
-        self.value = value
-        self.weight = weight
-        self.bound = bound
-        self.included_items = included_items
+class Solving:
+    def __init__(self, fileInput, fileOutput):
+        self._maxVal = 0
+        self._answer = []
+        self._capaticy = 0
+        self._numOfClass = 0
+        self._classLabel = None
+        self._data = []
+        self._fileInput = fileInput
+        self._fileOutput = fileOutput
 
-    def __lt__(self, other):
-        return self.bound > other.bound
+    def GetData(self):
+        dataset_file = open(f"{self._fileInput}", "r")
+        lines = dataset_file.readlines()
 
-def bound(node, n, capacity, values, weights):
-    """
-        Calculate the upper bound on the maximum value that can be obtained by including items 
-        in the knapsack starting from the current node.
-    """
-    if node.weight >= capacity:
-        return 0
+        self._capacity = float(lines[0])
+        self._numOfClass = int(lines[1])
+        weights = np.array(list(map(float, lines[2].replace("\n", "").split(", "))))
+        values = np.array(list(map(float, lines[3].replace("\n", "").split(", "))))
+        self._classLabel = np.array(list(map(int, lines[4].replace("\n", "").split(", "))))
+        delta = values/weights
 
-    value_bound = node.value
-    weight_bound = node.weight
-    for i in range(node.level, n):
-        if weight_bound + weights[i] <= capacity:
-            value_bound += values[i]
-            weight_bound += weights[i]
+        for i in range(len(values)):
+            node = Node(weights[i], values[i], delta[i], i)
+            self._data.append(node)
+        self._data = np.sort(self._data)
+
+    def PrintResult(self):
+        output_file = open(f"{self._fileOutput}", "w")
+        output_file.write(f"{self._maxVal}\n")
+        if self._maxVal == 0:
+            output_file.write("No optimal solution found!")
         else:
-            remaining_capacity = capacity - weight_bound
-            value_bound += values[i] * (remaining_capacity / weights[i])
-            break
+            output_file.write(f"{self._answer}".replace('[', '').replace(']', '') + "\n")
+        output_file.close()
 
-    return value_bound
+    def SolveKnapsackUsingBNB(self):
+        self.GetData()
+        arr = np.array([0] * len(self._data))
+        self.BranchAndBound(self._data, arr, 0, 0, self._capacity)
+        self.PrintResult()
 
-def branch_and_bound(n, capacity, values, weights):
-    """
-        Solve the knapsack problem using branch and bound search.
-        Returns the maximum value that can be obtained by including items in the knapsack.
-    """
-    q = PriorityQueue()
-    root = Node(-1, 0, 0, 0, [])
-    q.put(root)
-    max_value = 0
+    def CopyArray(self, arr):
+        other = []
+        for i in arr:
+            other.append(i)
+        self._answer = other
 
-    while not q.empty():
-        node = q.get()
-        if node.bound > max_value:
-            level = node.level + 1
-            included_items = node.included_items.copy()
-            included_items.append(level)
-            bound_value = node.value + values[level]
-            bound_weight = node.weight + weights[level]
-            bound_bound = bound(Node(level, bound_value, bound_weight, 0, included_items), n, capacity, values, weights)
-            if bound_bound > max_value:
-                max_value = bound_bound
-            if bound_weight <= capacity and bound_bound > max_value:
-                max_value = bound_bound
-            if bound_bound > max_value:
-                q.put(Node(level, bound_value, bound_weight, bound_bound, included_items))
+    def checkClass(self, arr):
+        classExist = []
+        temp = np.where(arr == 1)
+        for i in temp[0]:
+            classExist.append(self._classLabel[i])
+        for i in range(self._numOfClass):
+            if i + 1 not in classExist:
+                return False
+        return True
 
-            not_included_bound = bound(Node(level, node.value, node.weight, 0, included_items), n, capacity, values, weights)
-            if not_included_bound > max_value:
-                q.put(Node(level, node.value, node.weight, not_included_bound, included_items))
-
-    return max_value
+    def BranchAndBound(self, nodes, arr, id, curVal, curWeight):
+        i = 1
+        while i >= 0:
+            arr[nodes[id]._index] = i
+            curV = curVal + nodes[id]._value * i
+            curW = curWeight - nodes[id]._weight * i
+            if id == len(self._data) - 1:
+                if i == 1:
+                    if curW >= 0:
+                        if curV > self._maxVal and self.checkClass(arr):
+                            self._maxVal = curV
+                            self.CopyArray(arr)
+                        return
+                else:
+                    if curV > self._maxVal and self.checkClass(arr):
+                        self._maxVal = curV
+                        self.CopyArray(arr)
+                    return
+            else:
+                g = curV + curW * nodes[id + 1]._delta
+                if i == 1:
+                    if curW >= 0 and g > self._maxVal:
+                        self.BranchAndBound(nodes, arr, id + 1, curV, curW)
+                else:
+                    if g > self._maxVal:
+                        self.BranchAndBound(nodes, arr, id + 1, curV, curW)
+                    return
+            i -= 1
