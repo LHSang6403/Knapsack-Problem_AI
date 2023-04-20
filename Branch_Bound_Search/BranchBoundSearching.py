@@ -7,7 +7,7 @@ class Node:
         self._weight = weight
         self._value = value
         self._delta = delta
-        self._index = index
+        self._index = index # original position in the solution
 
     def __lt__(self, node):
         return self._delta > node._delta
