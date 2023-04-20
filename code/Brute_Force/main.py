@@ -25,7 +25,7 @@ def main():
     # Set algorithm parameters
     beam_width = 100
     max_iter = 1000
-
+    print("Start brute-force")
     # Solve knapsack problem using local beam search
     best_value, best_solution = brute_force(
         knapsack_capacity, num_classes, weights, values, class_labels)
