@@ -49,34 +49,34 @@ class Problem:
     # curVal: the current value of the items in the knapsack
     # Formula: g = v + w(vi+1 / wi+1), w is remaining weight
     def BranchAndBound(self, nodes, arr, id, curVal, curWeight):
-        i = 1 # 1 is left child, 0 is right child
-        while i >= 0:
-            arr[nodes[id]._index] = i
+        index = 1 # 1 is left child, 0 is right child
+        while index >= 0:
+            arr[nodes[id]._index] = index
 
             ## Total value of the knapsack after considering the current node
-            curV = curVal + nodes[id]._value * i # total value
-            curW = curWeight - nodes[id]._weight * i # remaining weight
+            curV = curVal + nodes[id]._value * index # total value
+            curW = curWeight - nodes[id]._weight * index # remaining weight
 
             if id == len(self._data) - 1: # considering the last node
-                if i == 1: # left child
+                if index == 1: # left route
                     if curW >= 0:
                         if curV > self._maxVal and self.CheckClass(arr):
                             self._maxVal = curV
                             self.CopyArray(arr)
                         return
-                else: #right child
+                else: #right route
                     if curV > self._maxVal and self.CheckClass(arr):
                         self._maxVal = curV
                         self.CopyArray(arr)
                     return
             else: # isn't the last node
                 g = curV + curW * nodes[id + 1]._delta
-                if i == 1: #left child
+                if index == 1: #left route
                     if curW >= 0 and g > self._maxVal:
                         self.BranchAndBound(nodes, arr, id + 1, curV, curW)
                     #else: switch to i = 0 at the next loop (i = 0)
-                else: #right child
+                else: #right route
                     if g > self._maxVal:
                         self.BranchAndBound(nodes, arr, id + 1, curV, curW)
                     return
-            i -= 1
+            iindex -= 1 # switch to the right route
