@@ -1,0 +1,21 @@
+services:
+  brute-force-client:
+    image: python:latest
+    container_name: brute-force
+    volumes:
+      - ./code:/usr/code
+  beam-client:
+    image: python:latest
+    container_name: beam
+    volumes:
+      - ./code:/usr/code
+  branch-client:
+    image: python:latest
+    container_name: branch
+    volumes:
+      - ./code:/usr/code
+  genetic-client:
+    image: python:latest
+    container_name: genetic
+    volumes:
+      - ./code:/usr/code
