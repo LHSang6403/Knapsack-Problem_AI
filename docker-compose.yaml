@@ -1,9 +1,12 @@
 services:
-  brute-force-client:
+  brute-client:
     image: python:latest
     container_name: brute-force
     volumes:
       - ./code:/usr/code
+    command:
+      - cd /usr/code
+      - python3 ./Brute_Force/main.py
   beam-client:
     image: python:latest
     container_name: beam
