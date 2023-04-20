@@ -1,7 +1,7 @@
 import os
 import sys
 
-current_directory = os.getcwd()
+current_directory = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 sys.path.append(current_directory)
 
 from DoFile import *
