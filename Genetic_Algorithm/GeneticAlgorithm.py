@@ -37,11 +37,8 @@ def calculate_fitness(chromosome: list[int]) -> int:
         if chromosome[i] == 1:
             total_weight += weights[i]
             total_value += values[i]
-            if labels_count[labels[i]] == 0:
-                picked_label += 1
-            labels_count[labels[i]] += 1
 
-    if picked_label < total_label or total_weight > max_weight:
+    if total_weight > max_weight:
         return 0
     else:
         return total_value
