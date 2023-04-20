@@ -14,7 +14,7 @@ from DoFile import *
 
 
 # Read input data
-input_file = os.path.join(current_directory, "INPUT_3.txt")
+input_file = os.path.join(current_directory, "INPUT_1.txt")
 knapsack_capacity, num_classes, weights, values, class_labels = read_input(
     input_file)
 
@@ -28,7 +28,7 @@ best_value, best_solution = genetic(
 
 # Write output data
 output_file = os.path.join(
-    current_directory, "Genetic_Algorithm", "OUTPUT_3.txt")
+    current_directory, "Genetic_Algorithm", "OUTPUT_1.txt")
 write_output(output_file, best_value, best_solution)
 
 print("\nGenetic algorithm finished")
