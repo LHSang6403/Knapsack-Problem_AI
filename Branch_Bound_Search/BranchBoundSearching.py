@@ -84,17 +84,17 @@ class Problem:
 # arr: a binary array indicating which items are currently in the knapsack (1 for in, 0 for out)
 # id: the index of the current node being considered
 # curVal: the current value of the items in the knapsack
-# Formula: g = v + w(vi+1 / wi+1)
+# Formula: g = v + w(vi+1 / wi+1), w is remaining weight
     def BranchAndBound(self, nodes, arr, id, curVal, curWeight):
-        i = 1
+        i = 1 # 1 is left child, 0 is right child
         while i >= 0:
             arr[nodes[id]._index] = i
 
             ## Total value of the knapsack after considering the current node
-            curV = curVal + nodes[id]._value * i
-            curW = curWeight - nodes[id]._weight * i
+            curV = curVal + nodes[id]._value * i # total value
+            curW = curWeight - nodes[id]._weight * i # remaining weight
 
-            if id == len(self._data) - 1: # case last node
+            if id == len(self._data) - 1: # considering last node
                 if i == 1:
                     if curW >= 0:
                         if curV > self._maxVal and self.checkClass(arr):
@@ -106,13 +106,14 @@ class Problem:
                         self._maxVal = curV
                         self.CopyArray(arr)
                     return
-            else:
+            else: # isn't the last node
                 g = curV + curW * nodes[id + 1]._delta
                 if i == 1:
                     if curW >= 0 and g > self._maxVal:
                         self.BranchAndBound(nodes, arr, id + 1, curV, curW)
+                    #else: switch to i = 0 at the next loop
                 else:
-                    if g > self._maxVal: # valid route
+                    if g > self._maxVal:
                         self.BranchAndBound(nodes, arr, id + 1, curV, curW)
                     return
             i -= 1
