@@ -1,4 +1,6 @@
 import itertools
+
+
 def checkCountClass(count_class):
     for i in range(len(count_class)):
         if count_class[i] <= 0:
@@ -10,7 +12,10 @@ def brute_force(W, m, wt, v, c):
     count_class = [0 for i in range(m)]
     chosen = [0 for i in range(n)]
     all_combinations = [[0,1] for i in range(n)]
+    counter = 0
     for temp in itertools.product(*all_combinations):
+        counter+=1
+        print(counter)
         count_class[:] = [0 for i in count_class]
         value = 0
         weight = 0
