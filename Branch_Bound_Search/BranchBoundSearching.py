@@ -47,7 +47,6 @@ class Problem:
     # arr: a binary array indicating which items are currently in the knapsack (1 for in, 0 for out)
     # id: the index of the current node being considered
     # curVal: the current value of the items in the knapsack
-    # Formula: g = v + w(vi+1 / wi+1), w is remaining weight
     def BranchAndBound(self, nodes, arr, id, curVal, curWeight):
         index = 1 # 1 is left child, 0 is right child
         while index >= 0:
@@ -79,4 +78,4 @@ class Problem:
                     if g > self._maxVal:
                         self.BranchAndBound(nodes, arr, id + 1, curV, curW)
                     return
-            iindex -= 1 # switch to the right route
+            index -= 1 # switch to the right route
