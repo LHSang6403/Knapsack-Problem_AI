@@ -1,14 +1,16 @@
 import numpy as np
-from GeneticAlgorithm import (
-    genetic
-)
-from DoFile import *
 import os
 import sys
 
 current_directory = os.path.dirname(
     os.path.dirname(os.path.realpath(__file__)))
 sys.path.append(current_directory)
+
+from GeneticAlgorithm import (
+    genetic
+)
+from DoFile import *
+
 
 
 # Read input data

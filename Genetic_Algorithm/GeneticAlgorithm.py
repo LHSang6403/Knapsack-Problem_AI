@@ -1,8 +1,8 @@
 import random
 
 population_size = 10
-mutation_probability = 0.2
-generations = 10
+mutation_probability = 0.3
+generations = 100
 
 max_weight = 0
 total_label = 0
@@ -107,9 +107,13 @@ def genetic(W: int, m: int, wt: list, v: list, c: list) -> tuple[int, list]:
             - max_val: a high-quality max value of solution
             - chosen: a list contain a set of items has sum is max_val
         """
+    global max_weight, total_label, items_size, weights, values, labels
     items_size = len(v)
     max_weight = W
-    bag_size = W
+    total_label = m
+    values = v
+    weights = wt
+    labels = c
 
     population = generate_population(population_size)
     for _ in range(generations):
