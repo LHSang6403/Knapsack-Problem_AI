@@ -1,16 +1,15 @@
-import os
-import sys
-
-current_directory = os.getcwd()
-sys.path.append(current_directory)
-
-from DoFile import *
+import numpy as np
 from GeneticAlgorithm import (
     genetic
 )
-
-import numpy as np
+from DoFile import *
 import os
+import sys
+
+current_directory = os.path.dirname(
+    os.path.dirname(os.path.realpath(__file__)))
+sys.path.append(current_directory)
+
 
 # Read input data
 input_file = os.path.join(current_directory, "INPUT_3.txt")
@@ -26,7 +25,8 @@ best_value, best_solution = genetic(
     knapsack_capacity, num_classes, weights, values, class_labels)
 
 # Write output data
-output_file = os.path.join(current_directory , "Genetic_Algorithm", "OUTPUT_3.txt")
+output_file = os.path.join(
+    current_directory, "Genetic_Algorithm", "OUTPUT_3.txt")
 write_output(output_file, best_value, best_solution)
 
 print("\nGenetic algorithm finished")
