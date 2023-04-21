@@ -17,7 +17,7 @@ from checkValid import (
     checkValid
 )
 
-for i in range(1,9):
+for i in range(1,10):
 # Read input data
     input_file = os.path.join(current_directory, "INPUT_" + str(i) + ".txt")
     knapsack_capacity, num_classes, weights, values, class_labels = read_input(
@@ -30,10 +30,11 @@ for i in range(1,9):
 
     start_time = timer()
     # Solve knapsack problem using local beam search
-    best_value, best_solution = genetic(
+    loop, best_value, best_solution = genetic(
         knapsack_capacity, num_classes, weights, values, class_labels)
     end_time = timer()
     print("Solution:", best_value)
+    print("Loop count:", loop)
     print("Time using:", round (end_time - start_time, 4), "seconds")
     print("Valid status:", checkValid(knapsack_capacity,
             num_classes, weights, values, class_labels, best_solution))
