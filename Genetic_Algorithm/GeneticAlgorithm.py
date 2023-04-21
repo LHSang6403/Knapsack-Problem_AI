@@ -1,5 +1,7 @@
 import random
 
+loop_count = 0
+
 population_size = 100
 mutation_probability = 0.3
 generations = 1000
@@ -15,6 +17,9 @@ labels = []
 
 def calculate_fitness(chromosome: list[int]) -> tuple[int, int, int]:
     """function to calculate the fitness of a chromosome"""
+
+    global loop_count
+
     total_weight = 0
     total_value = 0
 
@@ -23,6 +28,7 @@ def calculate_fitness(chromosome: list[int]) -> tuple[int, int, int]:
     label_left = total_label
 
     for i in range(len(chromosome)):
+        loop_count+=1
         if chromosome[i] == 1:
             total_weight += weights[i]
             total_value += values[i]
@@ -45,13 +51,15 @@ def generate_population(population_size: int) -> tuple[int, list[tuple[int, list
     """
     population = []
     total_fitness = 0
-    while len(population) < population_size:
+    time_try = population_size
+    while time_try > 0 and len(population) < population_size:
         genes = [0, 1]
         chromosome = []
         for _ in range(items_size):
             chromosome.append(random.choice(genes))
         weight_diff, class_left, fitness_value = calculate_fitness(chromosome)
-        if weight_diff > 0 or class_left > 0:
+        if time_try > 0 and (weight_diff > 0 or class_left > 0):     
+            time_try -= 1  
             continue
         population.append((fitness_value, chromosome))
         total_fitness += fitness_value
@@ -85,9 +93,11 @@ def mutate(chromosome: list[int]) -> list[int]:
 
 def get_best(population: list[list[int]]) -> list[int]:
     """function to get the best chromosome from the population"""
+    global loop_count
     max_index = 0
     max_value = population[0][0] - 1
     for i in range(len(population)):
+        loop_count += 1
         if population[i][0] > max_value:
             max_value = population[i][0]
             max_index = i
@@ -115,7 +125,7 @@ def genetic(W: int, m: int, wt: list, v: list, c: list) -> tuple[int, list]:
             - max_val: a high-quality max value of solution
             - chosen: a list contain a set of items has sum is max_val
         """
-    global population_size, generations
+    global population_size, generations, loop_count
     global max_weight, total_label, items_size, weights, values, labels
     items_size = len(v)
     max_weight = W
@@ -128,10 +138,12 @@ def genetic(W: int, m: int, wt: list, v: list, c: list) -> tuple[int, list]:
     generations = items_size * 100
 
     max_val = 0
+    best = []
     total_fitness, population = generate_population(population_size)
     fitness_rate = []
 
     for item in population:
+        loop_count += 1
         fitness_rate.append(float(item[0]) / total_fitness)
 
     for _ in range(generations):
@@ -156,14 +168,17 @@ def genetic(W: int, m: int, wt: list, v: list, c: list) -> tuple[int, list]:
         population.clear()
         total_fitness = 0
         for item in new_population:
-            fitness_value = calculate_fitness(item)[2]
+            weight_diff, class_left, fitness_value = calculate_fitness(item)
+            if fitness_value > max_val and weight_diff == 0 and class_left == 0:
+                best = item
+                max_val = fitness_value
             population.append((fitness_value, item))
             total_fitness += fitness_value
         
 
         fitness_rate.clear()
         for i in range(len(population)):
+            loop_count += 1
             fitness_rate.append( float(population[i][0])/total_fitness)
 
-    max_val, best = get_best(population)
-    return max_val, best
+    return loop_count, max_val, best
