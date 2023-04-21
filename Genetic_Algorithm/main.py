@@ -17,7 +17,7 @@ from checkValid import (
     checkValid
 )
 
-for i in range(1,10):
+for i in range(1,12):
 # Read input data
     input_file = os.path.join(current_directory, "INPUT_" + str(i) + ".txt")
     knapsack_capacity, num_classes, weights, values, class_labels = read_input(

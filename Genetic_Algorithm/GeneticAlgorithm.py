@@ -3,7 +3,7 @@ import random
 loop_count = 0
 
 population_size = 100
-mutation_probability = 0.3
+mutation_probability = 0.2
 generations = 1000
 
 max_weight = 0
@@ -90,26 +90,6 @@ def mutate(chromosome: list[int]) -> list[int]:
         chromosome[mutation_point] = 0
     return chromosome
 
-
-def get_best(population: list[list[int]]) -> list[int]:
-    """function to get the best chromosome from the population"""
-    global loop_count
-    max_index = 0
-    max_value = population[0][0] - 1
-    for i in range(len(population)):
-        loop_count += 1
-        if population[i][0] > max_value:
-            max_value = population[i][0]
-            max_index = i
-
-
-    weight_diff, class_left, fitness_value = calculate_fitness(population[max_index][1])
-    if weight_diff > 0 or class_left > 0:
-        return 0, [0 for _ in range(items_size)]
-    
-    return fitness_value, population[max_index][1]
-
-
 def genetic(W: int, m: int, wt: list, v: list, c: list) -> tuple[int, list]:
     """
         The function performs genetic algortihm to solve Kapsnack
@@ -134,7 +114,7 @@ def genetic(W: int, m: int, wt: list, v: list, c: list) -> tuple[int, list]:
     weights = wt
     labels = c
 
-    population_size = items_size * 10
+    population_size = items_size * 20
     generations = items_size * 100
     print("population:", population_size, "generations:", generations, "total:", population_size * generations)
 
