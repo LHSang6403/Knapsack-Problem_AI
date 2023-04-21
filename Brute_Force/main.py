@@ -18,7 +18,7 @@ import os
 
 def main():
     # Read input data
-    input_file = os.path.join(current_directory, "INPUT_7.txt")
+    input_file = os.path.join(current_directory, "INPUT_5.txt")
     knapsack_capacity, num_classes, weights, values, class_labels = read_input(
         input_file)
 
@@ -31,7 +31,7 @@ def main():
         knapsack_capacity, num_classes, weights, values, class_labels)
 
     # Write output data
-    output_file = os.path.join(current_directory , "Brute_Force", "OUTPUT_7.txt")
+    output_file = os.path.join(current_directory , "Brute_Force", "OUTPUT_5.txt")
     write_output(output_file, best_value, best_solution)
 
     print("\nBrute Force search finished")
