@@ -23,7 +23,7 @@ import os
 
 def read_input(filename):
     with open(filename, 'r') as f:
-        W = int(f.readline().strip())  # knapsack capacity
+        W = float(f.readline().strip())  # knapsack capacity
         m = int(f.readline().strip())  # number of classes
         # item weights
         w = np.array(list(map(float, f.readline().strip().split(','))))
