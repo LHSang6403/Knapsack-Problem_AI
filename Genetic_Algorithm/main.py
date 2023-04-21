@@ -7,11 +7,15 @@ current_directory = os.path.dirname(
     os.path.dirname(os.path.realpath(__file__)))
 sys.path.append(current_directory)
 
+
 from GeneticAlgorithm import (
     genetic
 )
 from DoFile import *
 
+from checkValid import (
+    checkValid
+)
 
 for i in range(1,9):
 # Read input data
@@ -30,7 +34,9 @@ for i in range(1,9):
         knapsack_capacity, num_classes, weights, values, class_labels)
     end_time = timer()
     print("Solution:", best_value)
-    print("Time using:", round (end_time - start_time, 2), "seconds")
+    print("Time using:", round (end_time - start_time, 4), "seconds")
+    print("Valid status:", checkValid(knapsack_capacity,
+            num_classes, weights, values, class_labels, best_solution))
     print()
     # Write output data
     output_file = os.path.join(
