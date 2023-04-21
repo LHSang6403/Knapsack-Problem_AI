@@ -1,4 +1,5 @@
 import numpy as np
+from timeit import default_timer as timer
 import os
 import sys
 
@@ -22,11 +23,14 @@ for i in range(1,9):
     print("Capacity:", knapsack_capacity)
     print("Num classes: ", num_classes)
     print(len(weights), " items")
+
+    start_time = timer()
     # Solve knapsack problem using local beam search
     best_value, best_solution = genetic(
         knapsack_capacity, num_classes, weights, values, class_labels)
-
+    end_time = timer()
     print("Solution:", best_value)
+    print("Time using:", end_time - start_time)
     print()
     # Write output data
     output_file = os.path.join(
