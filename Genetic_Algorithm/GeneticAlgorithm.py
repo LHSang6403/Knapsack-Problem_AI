@@ -136,6 +136,7 @@ def genetic(W: int, m: int, wt: list, v: list, c: list) -> tuple[int, list]:
 
     population_size = items_size * 10
     generations = items_size * 100
+    print("population:", population_size, "generations:", generations, "total:", population_size * generations)
 
     max_val = 0
     best = []
