@@ -13,18 +13,6 @@ values = []
 labels = []
 
 
-def generate_population(population_size: int) -> list[list[int]]:
-    """Function to generate a random population"""
-    population = []
-    for _ in range(population_size):
-        genes = [0, 1]
-        chromosome = []
-        for _ in range(items_size):
-            chromosome.append(random.choice(genes))
-        population.append(chromosome)
-    return population
-
-
 def calculate_fitness(chromosome: list[int]) -> int:
     """function to calculate the fitness of a chromosome"""
     total_weight = 0
@@ -40,24 +28,33 @@ def calculate_fitness(chromosome: list[int]) -> int:
             labels_count[labels[i]] += 1
 
     if total_weight > max_weight:
-        return int (0.1 * total_value)
+        return int(0.1 * total_value)
     elif all(count > 0 for count in labels_count):
         return total_value
     else:
         return int(0.1 * total_value)
 
 
+def generate_population(population_size: int) ->tuple[int, list[tuple[int, list[int]]]]:
+    """Function to generate a random population
+    
+    Return: total_fitness, population
+    """
+    population = []
+    total_fitness = 0
+    for _ in range(population_size):
+        genes = [0, 1]
+        chromosome = []
+        for _ in range(items_size):
+            chromosome.append(random.choice(genes))
+        fitness_value = calculate_fitness(chromosome)
+        population.append((fitness_value, chromosome))
+    return total_fitness, population
 
-def select_chromosomes(population: list[list[int]]) -> tuple[list[int], list[int]]:
+
+def select_chromosomes(fitness_rate:list[int], population: list[tuple[int, list[int]]]) -> tuple[list[int], list[int]]:
     """function to select two chromosomes for crossover"""
-    fitness_values = []
-    for chromosome in population:
-        fitness_values.append(calculate_fitness(chromosome))
-
-    fitness_values = [float(i)/sum(fitness_values) for i in fitness_values]
-
-    parents = random.choices(population, weights=fitness_values, k=2)
-
+    parents = random.choices(population, weights=fitness_rate, k=2)
     return parents[0], parents[1]
 
 
