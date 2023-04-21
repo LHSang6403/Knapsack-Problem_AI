@@ -30,7 +30,7 @@ for i in range(1,9):
         knapsack_capacity, num_classes, weights, values, class_labels)
     end_time = timer()
     print("Solution:", best_value)
-    print("Time using:", end_time - start_time)
+    print("Time using:", round (end_time - start_time, 2), "seconds")
     print()
     # Write output data
     output_file = os.path.join(
