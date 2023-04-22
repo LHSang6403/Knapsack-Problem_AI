@@ -31,14 +31,14 @@ def WriteFile(fileOutput, BNB):
     output_file.close()
 
 def SolveKnapsackUsingBNB(BNB, fileInput, fileOutput):
-    print("---Start---")
+    print("Start")
     BNB = ReadFile(fileInput)
 
     # This code initializes a 1D numpy array arr with zeros
     # The length of the array is set to the number of items in self._data
     arr = np.array([0] * len(BNB._data))
-
+    print("Processing...")
     BNB.BranchAndBound(BNB._data, arr, 0, 0, BNB._capacity)
 
     WriteFile(fileOutput, BNB)
-    print("---Done---")
+    print("Done")
