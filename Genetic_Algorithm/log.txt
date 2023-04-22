@@ -1,0 +1,95 @@
+Starting here!!!
+D:\Github\Knapsack_Problem_AI\INPUT_1.txt
+Capacity: 101.0
+Num classes: 2
+10 items
+Solution: 117
+Loop count: 1101150
+Time using: 0.8617 seconds
+Valid status: True
+
+D:\Github\Knapsack_Problem_AI\INPUT_2.txt
+Capacity: 87.0
+Num classes: 2
+5 items
+Solution: 165
+Loop count: 1251525
+Time using: 0.1648 seconds
+Valid status: True
+
+D:\Github\Knapsack_Problem_AI\INPUT_3.txt
+Capacity: 193.0
+Num classes: 2
+10 items
+Solution: 548
+Loop count: 2352765
+Time using: 0.9627 seconds
+Valid status: True
+
+D:\Github\Knapsack_Problem_AI\INPUT_4.txt
+Capacity: 247.0
+Num classes: 3
+20 items
+Solution: 715
+Loop count: 10758325
+Time using: 5.9894 seconds
+Valid status: True
+
+D:\Github\Knapsack_Problem_AI\INPUT_5.txt
+Capacity: 461.0
+Num classes: 3
+30 items
+Solution: 1511
+Loop count: 38673595
+Time using: 18.4072 seconds
+Valid status: True
+
+D:\Github\Knapsack_Problem_AI\INPUT_6.txt
+Capacity: 992.0
+Num classes: 2
+40 items
+Solution: 1545
+Loop count: 104289995
+Time using: 47.18 seconds
+Valid status: True
+
+D:\Github\Knapsack_Problem_AI\INPUT_7.txt
+Capacity: 570.0
+Num classes: 5
+50 items
+Solution: 2065
+Loop count: 231838495
+Time using: 83.801 seconds
+Valid status: True
+
+D:\Github\Knapsack_Problem_AI\INPUT_8.txt
+Capacity: 1033.0
+Num classes: 6
+100 items
+Solution: 3964
+Loop count: 484394895
+Time using: 130.4467 seconds
+Valid status: True
+
+D:\Github\Knapsack_Problem_AI\INPUT_9.txt
+Capacity: 1504.0
+Num classes: 7
+200 items
+Solution: 6907
+Loop count: 986995395
+Time using: 204.6828 seconds
+Valid status: True
+
+D:\Github\Knapsack_Problem_AI\INPUT_10.txt
+Capacity: 3084.0
+Num classes: 8
+500 items
+Solution: 14600
+Loop count: 2239745895
+Time using: 438.154 seconds
+Valid status: True
+
+D:\Github\Knapsack_Problem_AI\INPUT_11.txt
+Capacity: 11635.0
+Num classes: 10
+1000 items
