@@ -50,7 +50,7 @@ class Problem:
     def BranchAndBound(self, nodes, arr, id, curVal, curWeight):
         index = 1 # 1 is left child, 0 is right child
         while index >= 0:
-            arr[nodes[id]._index] = index
+            arr[nodes[id]._index] = index # 2 case of index: using this node or "Go without"
 
             ## Total value of the knapsack after considering the current node
             curV = curVal + nodes[id]._value * index # total value
