@@ -43,4 +43,4 @@ for i in range(1,12):
     output_file = os.path.join(
         current_directory, "Genetic_Algorithm", "OUTPUT_" + str(i) + ".txt")
     write_output(output_file, best_value, best_solution)
-print("\nAlgoritm end!")
+print("\nAlgorithm end!")
