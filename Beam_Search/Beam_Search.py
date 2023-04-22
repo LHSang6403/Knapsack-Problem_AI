@@ -111,4 +111,3 @@ def local_beam_search(W, m, w, v, c, k):
             break
     states = best_states
     return best_val, best_state
-
