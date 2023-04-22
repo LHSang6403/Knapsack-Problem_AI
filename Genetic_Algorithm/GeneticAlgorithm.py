@@ -1,4 +1,5 @@
 import random
+from math import sqrt
 
 loop_count = 0
 
@@ -138,9 +139,9 @@ def genetic(W: int, m: int, wt: list, v: list, c: list) -> tuple[int, list]:
     population_size = items_size * 10
     generations = items_size * 100
 
-    if population_size * generations > 2500000:
-        population_size = 500
-        generations = 5000
+    if population_size * generations * total_label > 12500000:
+        population_size = int (sqrt (12500000 / total_label / 10)) 
+        generations = population_size * 10
 
     print("population:", population_size, "generations:", generations, "total:", population_size * generations)
 
