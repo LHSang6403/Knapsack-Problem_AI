@@ -25,7 +25,7 @@ def WriteFile(fileOutput, BNB):
     output_file = open(f"{fileOutput}", "w")
     output_file.write(f"{BNB._maxVal}\n")
     if BNB._maxVal == 0:
-        output_file.write("---Can not solve!---")
+        output_file.write("Can not solve")
     else:
         output_file.write(f"{BNB._answer}".replace('[', '').replace(']', '') + "\n")
     output_file.close()
