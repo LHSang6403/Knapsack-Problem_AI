@@ -14,7 +14,6 @@ weights = []
 values = []
 labels = []
 
-
 def calculate_fitness(chromosome: list[int]) -> tuple[int, int, int]:
     """function to calculate the fitness of a chromosome"""
 
@@ -50,10 +49,15 @@ def generate_population(population_size: int) -> tuple[int, list[tuple[int, list
     Return: total_fitness, population
     """
     population = []
+
     total_fitness = 0
     time_try = population_size
+    genes = [0, 1]
+
     while time_try > 0 and len(population) < population_size:
-        genes = [0, 1]
+        if time_try == 0 and len(population) == 0:
+            return 0, []
+        
         chromosome = []
         for _ in range(items_size):
             chromosome.append(random.choice(genes))
@@ -63,8 +67,25 @@ def generate_population(population_size: int) -> tuple[int, list[tuple[int, list
             continue
         population.append((fitness_value, chromosome))
         total_fitness += fitness_value
+
     return total_fitness, population
 
+
+def generate_satisfied_chromosome() -> tuple[int, list[int]]:
+    mini_labes = [-1] * (total_label + 1)
+    chromosome = [0] * items_size
+    for i in range(items_size):
+        if mini_labes[labels[i]] < 0 or weights[mini_labes[labels[i]]] > weights[i]:
+            mini_labes[labels[i]] = i
+    
+    for pos in mini_labes:
+        chromosome[pos] = 1
+
+    weight_diff, class_left, fitness_value = calculate_fitness(chromosome)
+    if weight_diff > 0 or class_left > 0:
+        return 0, []
+    
+    return fitness_value, chromosome
 
 def select_chromosomes(fitness_rate: list[int], population: list[tuple[int, list[int]]]) -> tuple[list[int], list[int]]:
     """function to select two chromosomes for crossover"""
@@ -114,15 +135,30 @@ def genetic(W: int, m: int, wt: list, v: list, c: list) -> tuple[int, list]:
     weights = wt
     labels = c
 
-    population_size = items_size * 20
+    population_size = items_size * 10
     generations = items_size * 100
+
+    if population_size * generations > 2500000:
+        population_size = 500
+        generations = 5000
+
     print("population:", population_size, "generations:", generations, "total:", population_size * generations)
 
-    max_val = 0
-    best = []
-    total_fitness, population = generate_population(population_size)
-    fitness_rate = []
+    max_val, best = generate_satisfied_chromosome()
+    if (max_val == 0):
+        return loop_count, 0, [0] * items_size
 
+    total_fitness, population = generate_population(population_size - 1)
+
+    if total_fitness == 0:
+        total_fitness = max_val * population_size
+        population = [(max_val, best)] * population_size
+
+    if len(population) < population_size:
+        total_fitness += max_val * (population_size - len(population))
+        population += [(max_val, best)] * (population_size - len(population))
+
+    fitness_rate = []
     for item in population:
         loop_count += 1
         fitness_rate.append(float(item[0]) / total_fitness)
