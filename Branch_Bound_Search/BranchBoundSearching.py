@@ -48,7 +48,7 @@ class Problem:
     # id: the index of the current node being considered
     # curVal: the current value of the items in the knapsack
     def BranchAndBound(self, nodes, arr, id, curVal, curWeight):
-        index = 1 # 1 is left child, 0 is right child
+        index = 1 # 1 is left child, which mean include; 0 is right child, which mean without
         while index >= 0:
             arr[nodes[id]._index] = index # 2 case of index: using this node or "Go without"
 
