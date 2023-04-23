@@ -6,9 +6,9 @@ import HandleBNB
 def main():
     current_dir = os.getcwd()
     sys.path.append(current_dir)
-    inputFile = os.path.join(current_dir, 'INPUT_7.txt')
+    inputFile = os.path.join(current_dir, 'INPUT_1.txt')
     outputFile = os.path.join(current_dir, "Branch_Bound_Search", 
-                              "OUTPUT_7.txt")
+                              "OUTPUT_1.txt")
 
     BNB = BranchBoundSearching.Problem()
     HandleBNB.SolveKnapsackUsingBNB(BNB, inputFile, outputFile)

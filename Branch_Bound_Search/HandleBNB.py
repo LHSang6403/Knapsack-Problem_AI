@@ -1,5 +1,6 @@
 import BranchBoundSearching
 import numpy as np
+import datetime
 
 def ReadFile(fileInput):
     BNB = BranchBoundSearching.Problem() 
@@ -33,12 +34,15 @@ def WriteFile(fileOutput, BNB):
 def SolveKnapsackUsingBNB(BNB, fileInput, fileOutput):
     print("Start")
     BNB = ReadFile(fileInput)
+    startTime = datetime.datetime.now()
 
     # This code initializes a 1D numpy array arr with zeros
     # The length of the array is set to the number of items in self._data
     arr = np.array([0] * len(BNB._data))
     print("Processing...")
     BNB.BranchAndBound(BNB._data, arr, 0, 0, BNB._capacity)
+    endTime = datetime.datetime.now()
+    executionTime = (endTime - startTime).total_seconds()
 
     WriteFile(fileOutput, BNB)
-    print("Done")
+    print(f"Done: {executionTime} s")
