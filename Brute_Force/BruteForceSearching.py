@@ -10,12 +10,10 @@ def brute_force(W, m, wt, v, c):
     count_class = [0 for i in range(m)]
     chosen = [0 for i in range(n)]
     all_combinations = [[0,1] for i in range(n)]
-    count = 0
     for temp in itertools.product(*all_combinations):
         count_class[:] = [0 for i in count_class]
         value = 0
         weight = 0
-        count+=1
         for i in range(len(temp)):
             if weight > W:
                 break
@@ -31,7 +29,6 @@ def brute_force(W, m, wt, v, c):
                 for i in range(len(wt)):
                     chosen[i] = temp[i]
                 max_val = value
-        print(count)
     return max_val, chosen
 #  0 1 
 
