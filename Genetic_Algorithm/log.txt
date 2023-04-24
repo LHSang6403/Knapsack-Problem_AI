@@ -75,3 +75,12 @@ D:\Github\Knapsack_Problem_AI\INPUT_9.txt
 Capacity: 1504.0
 Num classes: 7
 200 items
+Solution: 7025
+Loop count: 9287962675
+Time using: 4085.203 seconds
+Valid status: True
+
+D:\Github\Knapsack_Problem_AI\INPUT_10.txt
+Capacity: 3084.0
+Num classes: 8
+500 items
