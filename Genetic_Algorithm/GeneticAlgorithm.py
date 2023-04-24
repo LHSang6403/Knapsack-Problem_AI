@@ -7,7 +7,6 @@ expoect_seconds = 1
 expoect_calc = int(10**8/6 * expoect_seconds)
 mutation_probability = 0.3
 population_size = 100
-generations = 1000
 
 max_weight = 0
 total_label = 0
@@ -165,7 +164,7 @@ def mutate(chromosome: list[int]) -> list[int]:
         chromosome[mutation_point] = 0
     return chromosome
 
-def genetic(W: int, m: int, wt: list, v: list, c: list) -> tuple[int, list]:
+def genetic(generations: int, W: int, m: int, wt: list, v: list, c: list) -> tuple[int, list]:
     """
         The function performs genetic algortihm to solve Kapsnack
 
@@ -182,7 +181,7 @@ def genetic(W: int, m: int, wt: list, v: list, c: list) -> tuple[int, list]:
             - max_val: a high-quality max value of solution
             - chosen: a list contain a set of items has sum is max_val
         """
-    global population_size, generations, loop_count
+    global population_size, loop_count
     global max_weight, total_label, items_size, weights, values, labels
     items_size = len(v)
     max_weight = W
@@ -219,23 +218,25 @@ def genetic(W: int, m: int, wt: list, v: list, c: list) -> tuple[int, list]:
             
             verified, fitness = calculate_fitness(child1)
             
-            if verified:
-                new_population.append((fitness, child1))
-                total_fitness += fitness
-                new_fitness_cum.append(total_fitness)
-                verified, fitness = calculate_fitness(child1)
-                if fitness > max_val:
-                    best = child1
-                    max_val = fitness
+            if not verified:
+                child1 = parent1[1]
+            new_population.append((fitness, child1))
+            total_fitness += fitness
+            new_fitness_cum.append(total_fitness)
+            verified, fitness = calculate_fitness(child1)
+            if fitness > max_val:
+                best = child1
+                max_val = fitness
             
             verified, fitness = calculate_fitness(child2)
-            if verified:
-                new_population.append((fitness, child2))
-                total_fitness += fitness
-                new_fitness_cum.append(total_fitness)
-                if fitness > max_val:
-                    best = child2
-                    max_val = fitness
+            if not verified:
+                child2 = parent2[1]
+            new_population.append((fitness, child2))
+            total_fitness += fitness
+            new_fitness_cum.append(total_fitness)
+            if fitness > max_val:
+                best = child2
+                max_val = fitness
 
 
         # replace the old population with the new population
