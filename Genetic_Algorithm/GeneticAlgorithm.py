@@ -218,6 +218,7 @@ def genetic(W: int, m: int, wt: list, v: list, c: list) -> tuple[int, list]:
                 child2 = mutate(child2)
             
             verified, fitness = calculate_fitness(child1)
+            
             if verified:
                 new_population.append((fitness, child1))
                 total_fitness += fitness
@@ -226,6 +227,8 @@ def genetic(W: int, m: int, wt: list, v: list, c: list) -> tuple[int, list]:
                 if fitness > max_val:
                     best = child1
                     max_val = fitness
+            
+            verified, fitness = calculate_fitness(child2)
             if verified:
                 new_population.append((fitness, child2))
                 total_fitness += fitness
