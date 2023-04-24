@@ -1,86 +1,95 @@
 Starting here!!!
-D:\Github\Knapsack_Problem_AI\INPUT_1.txt
+/Users/david0403/Github/Knapsack_Problem_AI/INPUT_1.txt
 Capacity: 101.0
 Num classes: 2
 10 items
 Solution: 117
-Loop count: 1112120
-Time using: 0.8753 seconds
+Loop count: 954362
+Time using: 0.9894 seconds
 Valid status: True
 
-D:\Github\Knapsack_Problem_AI\INPUT_2.txt
+/Users/david0403/Github/Knapsack_Problem_AI/INPUT_2.txt
 Capacity: 87.0
 Num classes: 2
 5 items
 Solution: 165
-Loop count: 1265525
-Time using: 0.1597 seconds
+Loop count: 1441939
+Time using: 0.8513 seconds
 Valid status: True
 
-D:\Github\Knapsack_Problem_AI\INPUT_3.txt
+/Users/david0403/Github/Knapsack_Problem_AI/INPUT_3.txt
 Capacity: 193.0
 Num classes: 2
 10 items
 Solution: 548
-Loop count: 2377795
-Time using: 0.9925 seconds
+Loop count: 2399027
+Time using: 1.1557 seconds
 Valid status: True
 
-D:\Github\Knapsack_Problem_AI\INPUT_4.txt
+/Users/david0403/Github/Knapsack_Problem_AI/INPUT_4.txt
 Capacity: 247.0
 Num classes: 3
 20 items
 Solution: 715
-Loop count: 10825695
-Time using: 5.7857 seconds
+Loop count: 4142612
+Time using: 1.4579 seconds
 Valid status: True
 
-D:\Github\Knapsack_Problem_AI\INPUT_5.txt
+/Users/david0403/Github/Knapsack_Problem_AI/INPUT_5.txt
 Capacity: 461.0
 Num classes: 3
 30 items
 Solution: 1511
-Loop count: 38834325
-Time using: 18.8217 seconds
+Loop count: 6763965
+Time using: 2.0372 seconds
 Valid status: True
 
-D:\Github\Knapsack_Problem_AI\INPUT_6.txt
+/Users/david0403/Github/Knapsack_Problem_AI/INPUT_6.txt
 Capacity: 992.0
 Num classes: 2
 40 items
 Solution: 1545
-Loop count: 104614725
-Time using: 45.4751 seconds
+Loop count: 10457007
+Time using: 2.8598 seconds
 Valid status: True
 
-D:\Github\Knapsack_Problem_AI\INPUT_7.txt
+/Users/david0403/Github/Knapsack_Problem_AI/INPUT_7.txt
 Capacity: 570.0
 Num classes: 5
 50 items
-Solution: 2066
-Loop count: 232418575
-Time using: 76.8975 seconds
+Solution: 2055
+Loop count: 14938547
+Time using: 3.1467 seconds
 Valid status: True
 
-D:\Github\Knapsack_Problem_AI\INPUT_8.txt
+/Users/david0403/Github/Knapsack_Problem_AI/INPUT_8.txt
 Capacity: 1033.0
 Num classes: 6
 100 items
-Solution: 4029
-Loop count: 1243540675
-Time using: 583.9704 seconds
+Solution: 4003
+Loop count: 23596211
+Time using: 5.2746 seconds
 Valid status: True
 
-D:\Github\Knapsack_Problem_AI\INPUT_9.txt
+/Users/david0403/Github/Knapsack_Problem_AI/INPUT_9.txt
 Capacity: 1504.0
 Num classes: 7
 200 items
-Solution: 7025
-Loop count: 9287962675
-Time using: 4085.203 seconds
+Solution: 7112
+Loop count: 38692726
+Time using: 8.237 seconds
 Valid status: True
 
-D:\Github\Knapsack_Problem_AI\INPUT_10.txt
+/Users/david0403/Github/Knapsack_Problem_AI/INPUT_10.txt
 Capacity: 3084.0
 Num classes: 8
 500 items
+Solution: 14376
+Loop count: 62688017
+Time using: 10.956 seconds
+Valid status: True
+
+/Users/david0403/Github/Knapsack_Problem_AI/INPUT_11.txt
+Capacity: 11635.0
+Num classes: 10
+1000 items
