@@ -5,9 +5,9 @@ loop_count = 0
 
 expoect_seconds = 1
 expoect_calc = int(10**8/6 * expoect_seconds)
-mutation_probability = 0.2
+mutation_probability = 0.3
 population_size = 100
-generations = 100
+generations = 1000
 
 max_weight = 0
 total_label = 0
@@ -201,6 +201,8 @@ def genetic(W: int, m: int, wt: list, v: list, c: list) -> tuple[int, list]:
 
     for _ in range(generations):
         new_population = []
+        new_fitness_cum = []
+        total_fitness = 0
         while len(new_population) < len(population):
 
             # select two chromosomes for crossover
@@ -214,26 +216,27 @@ def genetic(W: int, m: int, wt: list, v: list, c: list) -> tuple[int, list]:
                 child1 = mutate(child1)
             if random.uniform(0, 1) < mutation_probability:
                 child2 = mutate(child2)
-            new_population.append(child1)
-            new_population.append(child2)
+            
+            verified, fitness = calculate_fitness(child1)
+            if verified:
+                new_population.append((fitness, child1))
+                total_fitness += fitness
+                new_fitness_cum.append(total_fitness)
+                verified, fitness = calculate_fitness(child1)
+                if fitness > max_val:
+                    best = child1
+                    max_val = fitness
+            if verified:
+                new_population.append((fitness, child2))
+                total_fitness += fitness
+                new_fitness_cum.append(total_fitness)
+                if fitness > max_val:
+                    best = child2
+                    max_val = fitness
+
 
         # replace the old population with the new population
-        population.clear()
-        fitness_cum.clear()
-
-        total_fitness = 0
-        for item in new_population:
-            verified, fitness_value = calculate_fitness(item)
-            if fitness_value > max_val and verified:
-                best = item
-                max_val = fitness_value
-            elif verified:
-                population.append((fitness_value, item))
-                total_fitness += fitness_value
-                fitness_cum.append(total_fitness)
-            else:
-                population.append((max_val, best))
-                total_fitness += max_val
-                fitness_cum.append(total_fitness)
+        population = new_population
+        fitness_cum = new_fitness_cum
 
     return loop_count, max_val, best
