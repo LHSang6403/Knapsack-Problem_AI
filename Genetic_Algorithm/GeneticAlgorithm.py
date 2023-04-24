@@ -3,9 +3,9 @@ from math import sqrt
 
 loop_count = 0
 
-population_size = 100
+expoect_seconds = 1
+expoect_calc = int(10**8/6 * expoect_seconds)
 mutation_probability = 0.2
-generations = 1000
 
 max_weight = 0
 total_label = 0
@@ -16,7 +16,9 @@ values = []
 labels = []
 
 def calculate_fitness(chromosome: list[int]) -> tuple[int, int, int]:
-    """function to calculate the fitness of a chromosome"""
+    """function to calculate the fitness of a chromosome
+        Time complexity: O(item_size * total_label)
+    """
 
     global loop_count
 
@@ -47,8 +49,11 @@ def calculate_fitness(chromosome: list[int]) -> tuple[int, int, int]:
 def generate_population(population_size: int) -> tuple[int, list[tuple[int, list[int]]]]:
     """Function to generate a random population
     
+    Time complexity O (population_size * items_size * total_label)
     Return: total_fitness, population
     """
+    global loop_count
+
     population = []
 
     total_fitness = 0
@@ -61,6 +66,7 @@ def generate_population(population_size: int) -> tuple[int, list[tuple[int, list
         
         chromosome = []
         for _ in range(items_size):
+            loop_count += 1
             chromosome.append(random.choice(genes))
         weight_diff, class_left, fitness_value = calculate_fitness(chromosome)
         if time_try > 0 and (weight_diff > 0 or class_left > 0):     
@@ -73,13 +79,22 @@ def generate_population(population_size: int) -> tuple[int, list[tuple[int, list
 
 
 def generate_satisfied_chromosome() -> tuple[int, list[int]]:
+    """Generate the minimum correct answer
+
+    Time complexity: O (items_size)
+
+    Return: minimum correct fitness, minimum correct choice
+    """
+    global loop_count
     mini_labes = [-1] * (total_label + 1)
     chromosome = [0] * items_size
     for i in range(items_size):
+        loop_count += 1
         if mini_labes[labels[i]] < 0 or weights[mini_labes[labels[i]]] > weights[i]:
             mini_labes[labels[i]] = i
     
     for pos in mini_labes:
+        loop_count += 1
         chromosome[pos] = 1
 
     weight_diff, class_left, fitness_value = calculate_fitness(chromosome)
@@ -89,13 +104,19 @@ def generate_satisfied_chromosome() -> tuple[int, list[int]]:
     return fitness_value, chromosome
 
 def select_chromosomes(fitness_rate: list[int], population: list[tuple[int, list[int]]]) -> tuple[list[int], list[int]]:
-    """function to select two chromosomes for crossover"""
+    """function to select two chromosomes for crossover
+    
+    Time complexity: O (1)
+    """
     parents = random.choices(population, weights=fitness_rate, k=2)
     return parents[0], parents[1]
 
 
 def crossover(parent1: tuple[int, list[int]], parent2: tuple[int, list[int]]) -> tuple[list[int], list[int]]:
-    """function to perform crossover between two chromosomes"""
+    """function to perform crossover between two chromosomes
+    
+    Time complexity: O (item_size)
+    """
     crossover_point = random.randint(0, items_size-1)
     child1 = parent1[1][0:crossover_point] + parent2[1][crossover_point:]
     child2 = parent2[1][0:crossover_point] + parent1[1][crossover_point:]
@@ -104,7 +125,10 @@ def crossover(parent1: tuple[int, list[int]], parent2: tuple[int, list[int]]) ->
 
 
 def mutate(chromosome: list[int]) -> list[int]:
-    """function to perform mutation on a chromosome"""
+    """function to perform mutation on a chromosome
+    
+    Time complexity O(1)
+    """
     mutation_point = random.randint(0, items_size-1)
     if chromosome[mutation_point] == 0:
         chromosome[mutation_point] = 1
@@ -123,6 +147,8 @@ def genetic(W: int, m: int, wt: list, v: list, c: list) -> tuple[int, list]:
             - v: values
             - c: class labels
 
+        Time Complexity: O(generations * populationn_size * item_size * total_label)
+
         Returns: A tuple
             - max_val: a high-quality max value of solution
             - chosen: a list contain a set of items has sum is max_val
@@ -136,12 +162,8 @@ def genetic(W: int, m: int, wt: list, v: list, c: list) -> tuple[int, list]:
     weights = wt
     labels = c
 
-    population_size = items_size * 10
-    generations = items_size * 100
-
-    if population_size * generations * total_label > 12500000:
-        population_size = int (sqrt (12500000 / total_label / 10)) 
-        generations = population_size * 10
+    population_size = 100
+    generations = (expoect_calc - items_size - population_size * items_size * total_label - population_size * 2)/(population_size + population_size)
 
     print("population:", population_size, "generations:", generations, "total:", population_size * generations)
 
@@ -156,13 +178,14 @@ def genetic(W: int, m: int, wt: list, v: list, c: list) -> tuple[int, list]:
         population = [(max_val, best)] * population_size
 
     if len(population) < population_size:
+        loop_count += 1
         total_fitness += max_val * (population_size - len(population))
         population += [(max_val, best)] * (population_size - len(population))
 
     fitness_rate = []
     for item in population:
         loop_count += 1
-        fitness_rate.append(float(item[0]) / total_fitness)
+        fitness_rate.append(item[0])
 
     for _ in range(generations):
         new_population = []
@@ -178,12 +201,15 @@ def genetic(W: int, m: int, wt: list, v: list, c: list) -> tuple[int, list]:
                 child1 = mutate(child1)
             if random.uniform(0, 1) < mutation_probability:
                 child2 = mutate(child2)
+            loop_count += 1
             new_population.append(child1)
             new_population.append(child2)
 
         # replace the old population with the new population
 
         population.clear()
+        fitness_rate.clear()
+
         total_fitness = 0
         for item in new_population:
             weight_diff, class_left, fitness_value = calculate_fitness(item)
@@ -191,12 +217,7 @@ def genetic(W: int, m: int, wt: list, v: list, c: list) -> tuple[int, list]:
                 best = item
                 max_val = fitness_value
             population.append((fitness_value, item))
+            fitness_rate.append(fitness_value)
             total_fitness += fitness_value
-        
-
-        fitness_rate.clear()
-        for i in range(len(population)):
-            loop_count += 1
-            fitness_rate.append( float(population[i][0])/total_fitness)
 
     return loop_count, max_val, best
