@@ -187,6 +187,8 @@ def genetic(generations: int, W: int, m: int, wt: list, v: list, c: list) -> tup
     weights = wt
     labels = c
 
+    population_size = int(items_size * total_label * 1.5)
+
     print("population:", population_size, ";generations:", generations)
 
     max_val, best = generate_satisfied_chromosome()
@@ -197,47 +199,31 @@ def genetic(generations: int, W: int, m: int, wt: list, v: list, c: list) -> tup
 
     for _ in range(generations):
         new_population = []
-        new_fitness_cum = []
-        total_fitness = 0
+        
         while len(new_population) < len(population):
 
             # select two chromosomes for crossover
             parent1, parent2 = select_chromosomes(fitness_cum, population)
-
             # perform crossover to generate two new chromosomes
             child1, child2 = crossover(parent1, parent2)
-
             # perform mutation on the two new chromosomes
             if random.uniform(0, 1) < mutation_probability:
                 child1 = mutate(child1)
             if random.uniform(0, 1) < mutation_probability:
                 child2 = mutate(child2)
-            
             verified, fitness = calculate_fitness(child1)
-            
-            if not verified:
-                child1 = parent1[1]
-            new_population.append((fitness, child1))
-            total_fitness += fitness
-            new_fitness_cum.append(total_fitness)
-            verified, fitness = calculate_fitness(child1)
-            if fitness > max_val:
-                best = child1
-                max_val = fitness
-            
+            if verified:
+                new_population.append((fitness, child1))
             verified, fitness = calculate_fitness(child2)
-            if not verified:
-                child2 = parent2[1]
-            new_population.append((fitness, child2))
-            total_fitness += fitness
-            new_fitness_cum.append(total_fitness)
-            if fitness > max_val:
-                best = child2
-                max_val = fitness
-
+            if verified:
+                new_population.append((fitness, child2))
 
         # replace the old population with the new population
-        population = new_population
-        fitness_cum = new_fitness_cum
+        temp = population + new_population
+        temp.sort(reverse=True)
+        population = temp[:population_size]
+        if max_val < population[0][0]:
+            best = population[0][1]
+            max_val = population[0][0]
 
     return loop_count, max_val, best
