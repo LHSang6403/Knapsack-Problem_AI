@@ -21,15 +21,15 @@ log.write("Starting here!!!\n")
 
 plt.ioff()
 
-generation_init = 500
+generation_init = 10
 counting = 10
-step = 1000
+step = 10
 
 for i in range(1,12):
 
     figure, axis = plt.subplots(2, 1)
     plt.close(figure)
-    figure.set_dpi(200)
+    ## figure.set_dpi(200)
     figure.tight_layout(pad=2)
     figure.text(0.5, 0.04, "Generations", ha='center', va='center')
 
