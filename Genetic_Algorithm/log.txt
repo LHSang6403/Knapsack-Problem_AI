@@ -4,8 +4,8 @@ Capacity: 101.0
 Num classes: 2
 10 items
 Solution: 117
-Loop count: 730062
-Time using: 0.2412 seconds
+Loop count: 7299186
+Time using: 2.4733 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_1.txt
@@ -13,8 +13,8 @@ Capacity: 101.0
 Num classes: 2
 10 items
 Solution: 117
-Loop count: 2920282
-Time using: 0.7216 seconds
+Loop count: 29209915
+Time using: 7.3269 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_1.txt
@@ -22,8 +22,8 @@ Capacity: 101.0
 Num classes: 2
 10 items
 Solution: 117
-Loop count: 6575273
-Time using: 1.1917 seconds
+Loop count: 65743977
+Time using: 12.7375 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_1.txt
@@ -31,8 +31,8 @@ Capacity: 101.0
 Num classes: 2
 10 items
 Solution: 117
-Loop count: 11688098
-Time using: 1.6623 seconds
+Loop count: 116876788
+Time using: 17.497 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_1.txt
@@ -40,8 +40,8 @@ Capacity: 101.0
 Num classes: 2
 10 items
 Solution: 117
-Loop count: 18260406
-Time using: 2.1416 seconds
+Loop count: 182605309
+Time using: 22.9086 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_1.txt
@@ -49,8 +49,8 @@ Capacity: 101.0
 Num classes: 2
 10 items
 Solution: 117
-Loop count: 26294990
-Time using: 2.6105 seconds
+Loop count: 262941102
+Time using: 27.187 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_1.txt
@@ -58,8 +58,8 @@ Capacity: 101.0
 Num classes: 2
 10 items
 Solution: 117
-Loop count: 35789356
-Time using: 3.0971 seconds
+Loop count: 357884849
+Time using: 32.6634 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_1.txt
@@ -67,8 +67,8 @@ Capacity: 101.0
 Num classes: 2
 10 items
 Solution: 117
-Loop count: 46742237
-Time using: 3.5506 seconds
+Loop count: 467434369
+Time using: 37.5344 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_1.txt
@@ -76,8 +76,8 @@ Capacity: 101.0
 Num classes: 2
 10 items
 Solution: 117
-Loop count: 59157142
-Time using: 4.0337 seconds
+Loop count: 591585885
+Time using: 42.2774 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_1.txt
@@ -85,8 +85,8 @@ Capacity: 101.0
 Num classes: 2
 10 items
 Solution: 117
-Loop count: 73031647
-Time using: 4.5058 seconds
+Loop count: 730378281
+Time using: 47.6496 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_1.txt
@@ -94,8 +94,8 @@ Capacity: 101.0
 Num classes: 2
 10 items
 Solution: 117
-Loop count: 88367834
-Time using: 5.022 seconds
+Loop count: 883761524
+Time using: 53.1016 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_2.txt
@@ -103,8 +103,8 @@ Capacity: 87.0
 Num classes: 2
 5 items
 Solution: 165
-Loop count: 88733207
-Time using: 0.205 seconds
+Loop count: 887414927
+Time using: 2.1977 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_2.txt
@@ -112,8 +112,8 @@ Capacity: 87.0
 Num classes: 2
 5 items
 Solution: 165
-Loop count: 89828844
-Time using: 0.6102 seconds
+Loop count: 898376187
+Time using: 6.9157 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_2.txt
@@ -121,8 +121,8 @@ Capacity: 87.0
 Num classes: 2
 5 items
 Solution: 165
-Loop count: 91656772
-Time using: 1.0175 seconds
+Loop count: 916646141
+Time using: 10.9985 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_2.txt
@@ -130,8 +130,8 @@ Capacity: 87.0
 Num classes: 2
 5 items
 Solution: 165
-Loop count: 94214563
-Time using: 1.4521 seconds
+Loop count: 942222868
+Time using: 15.2164 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_2.txt
@@ -139,8 +139,8 @@ Capacity: 87.0
 Num classes: 2
 5 items
 Solution: 165
-Loop count: 97503159
-Time using: 1.8291 seconds
+Loop count: 975111085
+Time using: 19.947 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_2.txt
@@ -148,8 +148,8 @@ Capacity: 87.0
 Num classes: 2
 5 items
 Solution: 165
-Loop count: 101522799
-Time using: 2.2332 seconds
+Loop count: 1015304948
+Time using: 23.9356 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_2.txt
@@ -157,8 +157,8 @@ Capacity: 87.0
 Num classes: 2
 5 items
 Solution: 165
-Loop count: 106272659
-Time using: 2.6307 seconds
+Loop count: 1062808327
+Time using: 28.7209 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_2.txt
@@ -166,8 +166,8 @@ Capacity: 87.0
 Num classes: 2
 5 items
 Solution: 165
-Loop count: 111755167
-Time using: 3.0311 seconds
+Loop count: 1117618504
+Time using: 34.4471 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_2.txt
@@ -175,8 +175,8 @@ Capacity: 87.0
 Num classes: 2
 5 items
 Solution: 165
-Loop count: 117967467
-Time using: 3.4507 seconds
+Loop count: 1179739205
+Time using: 39.7094 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_2.txt
@@ -184,8 +184,8 @@ Capacity: 87.0
 Num classes: 2
 5 items
 Solution: 165
-Loop count: 124910203
-Time using: 3.88 seconds
+Loop count: 1249163997
+Time using: 42.915 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_2.txt
@@ -193,8 +193,8 @@ Capacity: 87.0
 Num classes: 2
 5 items
 Solution: 165
-Loop count: 132584118
-Time using: 4.259 seconds
+Loop count: 1325901277
+Time using: 46.2748 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_3.txt
@@ -202,8 +202,8 @@ Capacity: 193.0
 Num classes: 2
 10 items
 Solution: 548
-Loop count: 133331584
-Time using: 0.3226 seconds
+Loop count: 1333378501
+Time using: 3.4171 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_3.txt
@@ -211,8 +211,8 @@ Capacity: 193.0
 Num classes: 2
 10 items
 Solution: 548
-Loop count: 135573101
-Time using: 0.9485 seconds
+Loop count: 1355796267
+Time using: 10.0437 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_3.txt
@@ -220,8 +220,8 @@ Capacity: 193.0
 Num classes: 2
 10 items
 Solution: 548
-Loop count: 139308389
-Time using: 1.5877 seconds
+Loop count: 1393150926
+Time using: 16.4759 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_3.txt
@@ -229,8 +229,8 @@ Capacity: 193.0
 Num classes: 2
 10 items
 Solution: 548
-Loop count: 144537600
-Time using: 2.2527 seconds
+Loop count: 1445450211
+Time using: 23.2576 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_3.txt
@@ -238,8 +238,8 @@ Capacity: 193.0
 Num classes: 2
 10 items
 Solution: 548
-Loop count: 151261537
-Time using: 2.8615 seconds
+Loop count: 1512686277
+Time using: 30.089 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_3.txt
@@ -247,8 +247,8 @@ Capacity: 193.0
 Num classes: 2
 10 items
 Solution: 548
-Loop count: 159477679
-Time using: 3.4813 seconds
+Loop count: 1594861088
+Time using: 36.3635 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_3.txt
@@ -256,8 +256,8 @@ Capacity: 193.0
 Num classes: 2
 10 items
 Solution: 548
-Loop count: 169188956
-Time using: 4.117 seconds
+Loop count: 1691983963
+Time using: 43.4139 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_3.txt
@@ -265,8 +265,8 @@ Capacity: 193.0
 Num classes: 2
 10 items
 Solution: 548
-Loop count: 180394971
-Time using: 4.7394 seconds
+Loop count: 1804045020
+Time using: 49.6708 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_3.txt
@@ -274,8 +274,8 @@ Capacity: 193.0
 Num classes: 2
 10 items
 Solution: 548
-Loop count: 193095078
-Time using: 5.3892 seconds
+Loop count: 1931045902
+Time using: 55.9319 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_3.txt
@@ -283,8 +283,8 @@ Capacity: 193.0
 Num classes: 2
 10 items
 Solution: 548
-Loop count: 207288032
-Time using: 5.9995 seconds
+Loop count: 2072992182
+Time using: 62.3681 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_3.txt
@@ -292,8 +292,8 @@ Capacity: 193.0
 Num classes: 2
 10 items
 Solution: 548
-Loop count: 222974701
-Time using: 6.6581 seconds
+Loop count: 2229876692
+Time using: 69.6412 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_4.txt
@@ -301,8 +301,8 @@ Capacity: 247.0
 Num classes: 3
 20 items
 Solution: 715
-Loop count: 224468177
-Time using: 0.4388 seconds
+Loop count: 2244807503
+Time using: 4.7038 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_4.txt
@@ -310,8 +310,8 @@ Capacity: 247.0
 Num classes: 3
 20 items
 Solution: 715
-Loop count: 228946072
-Time using: 1.3297 seconds
+Loop count: 2289573506
+Time using: 13.9453 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_4.txt
@@ -319,8 +319,8 @@ Capacity: 247.0
 Num classes: 3
 20 items
 Solution: 715
-Loop count: 236407034
-Time using: 2.1973 seconds
+Loop count: 2364184373
+Time using: 23.4346 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_4.txt
@@ -328,8 +328,8 @@ Capacity: 247.0
 Num classes: 3
 20 items
 Solution: 715
-Loop count: 246853843
-Time using: 3.0783 seconds
+Loop count: 2468646841
+Time using: 32.3382 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_4.txt
@@ -337,8 +337,8 @@ Capacity: 247.0
 Num classes: 3
 20 items
 Solution: 715
-Loop count: 260283537
-Time using: 3.9153 seconds
+Loop count: 2602949775
+Time using: 41.4832 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_4.txt
@@ -346,8 +346,8 @@ Capacity: 247.0
 Num classes: 3
 20 items
 Solution: 715
-Loop count: 276698210
-Time using: 4.7353 seconds
+Loop count: 2767094480
+Time using: 51.2773 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_4.txt
@@ -355,8 +355,8 @@ Capacity: 247.0
 Num classes: 3
 20 items
 Solution: 715
-Loop count: 296098086
-Time using: 5.5871 seconds
+Loop count: 2961088004
+Time using: 60.5355 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_4.txt
@@ -364,8 +364,8 @@ Capacity: 247.0
 Num classes: 3
 20 items
 Solution: 715
-Loop count: 318483156
-Time using: 6.475 seconds
+Loop count: 3184918661
+Time using: 70.6031 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_4.txt
@@ -373,8 +373,8 @@ Capacity: 247.0
 Num classes: 3
 20 items
 Solution: 715
-Loop count: 343851590
-Time using: 7.3667 seconds
+Loop count: 3438588963
+Time using: 82.5818 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_4.txt
@@ -382,8 +382,8 @@ Capacity: 247.0
 Num classes: 3
 20 items
 Solution: 715
-Loop count: 372201885
-Time using: 8.2852 seconds
+Loop count: 3722097938
+Time using: 87.1199 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_4.txt
@@ -391,8 +391,8 @@ Capacity: 247.0
 Num classes: 3
 20 items
 Solution: 715
-Loop count: 403541142
-Time using: 9.1058 seconds
+Loop count: 4035455039
+Time using: 95.9148 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_5.txt
@@ -400,8 +400,8 @@ Capacity: 461.0
 Num classes: 3
 30 items
 Solution: 1511
-Loop count: 405787035
-Time using: 0.6266 seconds
+Loop count: 4057911216
+Time using: 6.4175 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_5.txt
@@ -409,8 +409,8 @@ Capacity: 461.0
 Num classes: 3
 30 items
 Solution: 1511
-Loop count: 412522560
-Time using: 1.8683 seconds
+Loop count: 4125253348
+Time using: 19.2824 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_5.txt
@@ -418,8 +418,8 @@ Capacity: 461.0
 Num classes: 3
 30 items
 Solution: 1511
-Loop count: 423745983
-Time using: 3.0707 seconds
+Loop count: 4237483337
+Time using: 32.2984 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_5.txt
@@ -427,8 +427,8 @@ Capacity: 461.0
 Num classes: 3
 30 items
 Solution: 1511
-Loop count: 439459818
-Time using: 4.3225 seconds
+Loop count: 4394600419
+Time using: 45.0188 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_5.txt
@@ -436,8 +436,8 @@ Capacity: 461.0
 Num classes: 3
 30 items
 Solution: 1511
-Loop count: 459660164
-Time using: 5.6094 seconds
+Loop count: 4596608103
+Time using: 57.5103 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_5.txt
@@ -445,8 +445,8 @@ Capacity: 461.0
 Num classes: 3
 30 items
 Solution: 1511
-Loop count: 484346450
-Time using: 6.8234 seconds
+Loop count: 4843498279
+Time using: 70.6187 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_5.txt
@@ -454,8 +454,8 @@ Capacity: 461.0
 Num classes: 3
 30 items
 Solution: 1511
-Loop count: 513523022
-Time using: 8.1083 seconds
+Loop count: 5135271928
+Time using: 83.4219 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_5.txt
@@ -463,8 +463,8 @@ Capacity: 461.0
 Num classes: 3
 30 items
 Solution: 1511
-Loop count: 547189820
-Time using: 9.2229 seconds
+Loop count: 5471934746
+Time using: 96.1208 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_5.txt
@@ -472,8 +472,8 @@ Capacity: 461.0
 Num classes: 3
 30 items
 Solution: 1511
-Loop count: 585344401
-Time using: 10.5504 seconds
+Loop count: 5853482068
+Time using: 109.1378 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_5.txt
@@ -481,8 +481,8 @@ Capacity: 461.0
 Num classes: 3
 30 items
 Solution: 1511
-Loop count: 627986722
-Time using: 11.5835 seconds
+Loop count: 6279922692
+Time using: 121.6002 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_5.txt
@@ -490,26 +490,8 @@ Capacity: 461.0
 Num classes: 3
 30 items
 Solution: 1511
-Loop count: 675117305
-Time using: 12.6962 seconds
-Valid status: True
-
-/Users/david0403/Github/Knapsack_Problem_AI/INPUT_6.txt
-Capacity: 992.0
-Num classes: 2
-40 items
-Solution: 1535
-Loop count: 678120940
-Time using: 0.8878 seconds
-Valid status: True
-
-/Users/david0403/Github/Knapsack_Problem_AI/INPUT_6.txt
-Capacity: 992.0
-Num classes: 2
-40 items
-Solution: 1533
-Loop count: 687124252
-Time using: 2.6419 seconds
+Loop count: 6751256704
+Time using: 134.3892 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_6.txt
@@ -517,579 +499,587 @@ Capacity: 992.0
 Num classes: 2
 40 items
 Solution: 1537
-Loop count: 702127255
-Time using: 4.4557 seconds
+Loop count: 6781291469
+Time using: 9.0645 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_6.txt
 Capacity: 992.0
 Num classes: 2
 40 items
-Solution: 1539
-Loop count: 723129883
-Time using: 6.1984 seconds
+Solution: 1545
+Loop count: 6871321065
+Time using: 27.4246 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_6.txt
 Capacity: 992.0
 Num classes: 2
 40 items
-Solution: 1537
-Loop count: 750132430
-Time using: 7.84 seconds
+Solution: 1545
+Loop count: 7021346129
+Time using: 45.3104 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_6.txt
 Capacity: 992.0
 Num classes: 2
 40 items
-Solution: 1541
-Loop count: 783134419
-Time using: 9.554 seconds
+Solution: 1545
+Loop count: 7231366527
+Time using: 63.8734 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_6.txt
 Capacity: 992.0
 Num classes: 2
 40 items
-Solution: 1539
-Loop count: 822136217
-Time using: 11.2868 seconds
+Solution: 1545
+Loop count: 7501383247
+Time using: 81.3366 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_6.txt
 Capacity: 992.0
 Num classes: 2
 40 items
-Solution: 1540
-Loop count: 867137806
-Time using: 13.2133 seconds
+Solution: 1545
+Loop count: 7831393685
+Time using: 100.4724 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_6.txt
 Capacity: 992.0
 Num classes: 2
 40 items
-Solution: 1541
-Loop count: 918139017
-Time using: 15.0048 seconds
+Solution: 1545
+Loop count: 8221399612
+Time using: 118.1253 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_6.txt
 Capacity: 992.0
 Num classes: 2
 40 items
-Solution: 1539
-Loop count: 975140196
-Time using: 16.5893 seconds
+Solution: 1545
+Loop count: 8671401100
+Time using: 135.8003 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_6.txt
 Capacity: 992.0
 Num classes: 2
 40 items
-Solution: 1537
-Loop count: 1038140183
-Time using: 18.3528 seconds
+Solution: 1545
+Loop count: 9181397544
+Time using: 154.6366 seconds
+Valid status: True
+
+/Users/david0403/Github/Knapsack_Problem_AI/INPUT_6.txt
+Capacity: 992.0
+Num classes: 2
+40 items
+Solution: 1545
+Loop count: 9751389831
+Time using: 172.6497 seconds
+Valid status: True
+
+/Users/david0403/Github/Knapsack_Problem_AI/INPUT_6.txt
+Capacity: 992.0
+Num classes: 2
+40 items
+Solution: 1545
+Loop count: 10381376952
+Time using: 190.4365 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_7.txt
 Capacity: 570.0
 Num classes: 5
 50 items
-Solution: 2013
-Loop count: 1041888751
-Time using: 0.9815 seconds
+Solution: 2044
+Loop count: 10418858244
+Time using: 10.0833 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_7.txt
 Capacity: 570.0
 Num classes: 5
 50 items
-Solution: 2008
-Loop count: 1053125705
-Time using: 3.0747 seconds
+Solution: 2059
+Loop count: 10531229925
+Time using: 30.4813 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_7.txt
 Capacity: 570.0
 Num classes: 5
 50 items
-Solution: 2024
-Loop count: 1071852617
-Time using: 4.9863 seconds
+Solution: 2049
+Loop count: 10718492261
+Time using: 50.3947 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_7.txt
 Capacity: 570.0
 Num classes: 5
 50 items
-Solution: 2032
-Loop count: 1098072433
-Time using: 6.9195 seconds
+Solution: 2051
+Loop count: 10980662813
+Time using: 70.1486 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_7.txt
 Capacity: 570.0
 Num classes: 5
 50 items
-Solution: 2041
-Loop count: 1131781384
-Time using: 8.7223 seconds
+Solution: 2057
+Loop count: 11317716761
+Time using: 90.4033 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_7.txt
 Capacity: 570.0
 Num classes: 5
 50 items
-Solution: 2043
-Loop count: 1172979827
-Time using: 10.6271 seconds
+Solution: 2052
+Loop count: 11729637016
+Time using: 110.8412 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_7.txt
 Capacity: 570.0
 Num classes: 5
 50 items
-Solution: 2053
-Loop count: 1221666018
-Time using: 12.4601 seconds
+Solution: 2055
+Loop count: 12216468378
+Time using: 130.5029 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_7.txt
 Capacity: 570.0
 Num classes: 5
 50 items
-Solution: 2040
-Loop count: 1277850980
-Time using: 14.3908 seconds
+Solution: 2048
+Loop count: 12778193161
+Time using: 150.954 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_7.txt
 Capacity: 570.0
 Num classes: 5
 50 items
-Solution: 2036
-Loop count: 1341520089
-Time using: 16.4632 seconds
+Solution: 2060
+Loop count: 13414793219
+Time using: 171.0379 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_7.txt
 Capacity: 570.0
 Num classes: 5
 50 items
-Solution: 2047
-Loop count: 1412685020
-Time using: 18.727 seconds
+Solution: 2056
+Loop count: 14126276710
+Time using: 190.8294 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_7.txt
 Capacity: 570.0
 Num classes: 5
 50 items
-Solution: 2041
-Loop count: 1491332645
-Time using: 20.6246 seconds
+Solution: 2057
+Loop count: 14912643793
+Time using: 210.8113 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_8.txt
 Capacity: 1033.0
 Num classes: 6
 100 items
-Solution: 3833
-Loop count: 1498831680
-Time using: 1.8007 seconds
+Solution: 3872
+Loop count: 14987629378
+Time using: 18.0852 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_8.txt
 Capacity: 1033.0
 Num classes: 6
 100 items
-Solution: 3773
-Loop count: 1521321590
-Time using: 5.4304 seconds
+Solution: 3960
+Loop count: 15212500036
+Time using: 54.8605 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_8.txt
 Capacity: 1033.0
 Num classes: 6
 100 items
-Solution: 3736
-Loop count: 1558794722
-Time using: 8.779 seconds
+Solution: 3906
+Loop count: 15587251423
+Time using: 91.5297 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_8.txt
 Capacity: 1033.0
 Num classes: 6
 100 items
-Solution: 3825
-Loop count: 1611262378
-Time using: 12.7214 seconds
+Solution: 3935
+Loop count: 16111903275
+Time using: 128.1362 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_8.txt
 Capacity: 1033.0
 Num classes: 6
 100 items
-Solution: 3755
-Loop count: 1678728231
-Time using: 15.6884 seconds
+Solution: 3923
+Loop count: 16786472570
+Time using: 165.9403 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_8.txt
 Capacity: 1033.0
 Num classes: 6
 100 items
-Solution: 3754
-Loop count: 1761185069
-Time using: 19.6303 seconds
+Solution: 3961
+Loop count: 17610907007
+Time using: 201.405 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_8.txt
 Capacity: 1033.0
 Num classes: 6
 100 items
-Solution: 3717
-Loop count: 1858620554
-Time using: 22.6991 seconds
+Solution: 3966
+Loop count: 18585230901
+Time using: 239.045 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_8.txt
 Capacity: 1033.0
 Num classes: 6
 100 items
-Solution: 3799
-Loop count: 1971054268
-Time using: 26.7689 seconds
+Solution: 3934
+Loop count: 19709402066
+Time using: 276.4218 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_8.txt
 Capacity: 1033.0
 Num classes: 6
 100 items
-Solution: 3797
-Loop count: 2098460760
-Time using: 29.4585 seconds
+Solution: 3958
+Loop count: 20983502345
+Time using: 313.2095 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_8.txt
 Capacity: 1033.0
 Num classes: 6
 100 items
-Solution: 3771
-Loop count: 2240863152
-Time using: 33.9868 seconds
+Solution: 3955
+Loop count: 22407491735
+Time using: 349.2948 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_8.txt
 Capacity: 1033.0
 Num classes: 6
 100 items
-Solution: 3791
-Loop count: 2398256045
-Time using: 36.5012 seconds
+Solution: 3934
+Loop count: 23981410961
+Time using: 385.4699 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_9.txt
 Capacity: 1504.0
 Num classes: 7
 200 items
-Solution: 5785
-Loop count: 2413234464
-Time using: 2.7924 seconds
+Solution: 6387
+Loop count: 24131156400
+Time using: 29.4391 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_9.txt
 Capacity: 1504.0
 Num classes: 7
 200 items
-Solution: 5950
-Loop count: 2458185444
-Time using: 8.8747 seconds
+Solution: 6801
+Loop count: 24580729643
+Time using: 93.6765 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_9.txt
 Capacity: 1504.0
 Num classes: 7
 200 items
-Solution: 6005
-Loop count: 2533124040
-Time using: 14.9964 seconds
+Solution: 6763
+Loop count: 25330120472
+Time using: 159.0332 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_9.txt
 Capacity: 1504.0
 Num classes: 7
 200 items
-Solution: 6117
-Loop count: 2638053039
-Time using: 21.1017 seconds
+Solution: 6729
+Loop count: 26379289411
+Time using: 222.3204 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_9.txt
 Capacity: 1504.0
 Num classes: 7
 200 items
-Solution: 6262
-Loop count: 2772957805
-Time using: 26.7254 seconds
+Solution: 6740
+Loop count: 27728361781
+Time using: 286.4832 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_9.txt
 Capacity: 1504.0
 Num classes: 7
 200 items
-Solution: 6092
-Loop count: 2937852073
-Time using: 33.2531 seconds
+Solution: 6763
+Loop count: 29377222121
+Time using: 349.6909 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_9.txt
 Capacity: 1504.0
 Num classes: 7
 200 items
-Solution: 6189
-Loop count: 3132709623
-Time using: 39.3807 seconds
+Solution: 6723
+Loop count: 31325863437
+Time using: 413.7013 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_9.txt
 Capacity: 1504.0
 Num classes: 7
 200 items
-Solution: 6396
-Loop count: 3357551772
-Time using: 45.5491 seconds
+Solution: 6731
+Loop count: 33574297341
+Time using: 478.164 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_9.txt
 Capacity: 1504.0
 Num classes: 7
 200 items
-Solution: 6072
-Loop count: 3612394382
-Time using: 50.1839 seconds
+Solution: 6770
+Loop count: 36122623643
+Time using: 541.255 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_9.txt
 Capacity: 1504.0
 Num classes: 7
 200 items
-Solution: 6200
-Loop count: 3897205387
-Time using: 57.743 seconds
+Solution: 6734
+Loop count: 38970832744
+Time using: 605.0955 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_9.txt
 Capacity: 1504.0
 Num classes: 7
 200 items
-Solution: 6269
-Loop count: 4211996703
-Time using: 62.1382 seconds
+Solution: 6773
+Loop count: 42118755682
+Time using: 670.4479 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_10.txt
 Capacity: 3084.0
 Num classes: 8
 500 items
-Solution: 9973
-Loop count: 4249460680
-Time using: 6.366 seconds
+Solution: 12344
+Loop count: 42493176229
+Time using: 65.2195 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_10.txt
 Capacity: 3084.0
 Num classes: 8
 500 items
-Solution: 11322
-Loop count: 4361878638
-Time using: 20.1303 seconds
+Solution: 14412
+Loop count: 43617341479
+Time using: 216.0366 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_10.txt
 Capacity: 3084.0
 Num classes: 8
 500 items
-Solution: 11698
-Loop count: 4549278875
-Time using: 34.2094 seconds
+Solution: 14458
+Loop count: 45491115848
+Time using: 366.7365 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_10.txt
 Capacity: 3084.0
 Num classes: 8
 500 items
-Solution: 12040
-Loop count: 4811644572
-Time using: 48.792 seconds
+Solution: 14495
+Loop count: 48114711226
+Time using: 519.9176 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_10.txt
 Capacity: 3084.0
 Num classes: 8
 500 items
-Solution: 12396
-Loop count: 5149003795
-Time using: 63.7376 seconds
+Solution: 14683
+Loop count: 51488049680
+Time using: 674.6128 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_10.txt
 Capacity: 3084.0
 Num classes: 8
 500 items
-Solution: 12288
-Loop count: 5561332929
-Time using: 77.9363 seconds
+Solution: 14788
+Loop count: 55610988296
+Time using: 815.2276 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_10.txt
 Capacity: 3084.0
 Num classes: 8
 500 items
-Solution: 12415
-Loop count: 6048646933
-Time using: 92.5535 seconds
+Solution: 14709
+Loop count: 60483809834
+Time using: 966.3806 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_10.txt
 Capacity: 3084.0
 Num classes: 8
 500 items
-Solution: 12343
-Loop count: 6610897125
-Time using: 105.935 seconds
+Solution: 14797
+Loop count: 66106208330
+Time using: 1113.1704 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_10.txt
 Capacity: 3084.0
 Num classes: 8
 500 items
-Solution: 12365
-Loop count: 7248133120
-Time using: 121.3758 seconds
+Solution: 14675
+Loop count: 72478589470
+Time using: 1266.3008 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_10.txt
 Capacity: 3084.0
 Num classes: 8
 500 items
-Solution: 12516
-Loop count: 7960310124
-Time using: 134.2456 seconds
+Solution: 14784
+Loop count: 79600432984
+Time using: 1419.715 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_10.txt
 Capacity: 3084.0
 Num classes: 8
 500 items
-Solution: 12456
-Loop count: 8747524372
-Time using: 149.5299 seconds
+Solution: 14761
+Loop count: 87471983691
+Time using: 1591.3047 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_11.txt
 Capacity: 11635.0
 Num classes: 10
 1000 items
-Solution: 25501
-Loop count: 8822595242
-Time using: 15.6551 seconds
+Solution: 30114
+Loop count: 88222531453
+Time using: 165.0481 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_11.txt
 Capacity: 11635.0
 Num classes: 10
 1000 items
-Solution: 26700
-Loop count: 9047652260
-Time using: 48.8209 seconds
+Solution: 32834
+Loop count: 90472984120
+Time using: 511.4269 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_11.txt
 Capacity: 11635.0
 Num classes: 10
 1000 items
-Solution: 27586
-Loop count: 9422710246
-Time using: 81.1106 seconds
+Solution: 33615
+Loop count: 94223295457
+Time using: 867.6065 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_11.txt
 Capacity: 11635.0
 Num classes: 10
 1000 items
-Solution: 27321
-Loop count: 9947757926
-Time using: 113.0624 seconds
+Solution: 34963
+Loop count: 99473650115
+Time using: 1210.0915 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_11.txt
 Capacity: 11635.0
 Num classes: 10
 1000 items
-Solution: 28255
-Loop count: 10622811797
-Time using: 148.5521 seconds
+Solution: 35304
+Loop count: 106223792913
+Time using: 1602.031 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_11.txt
 Capacity: 11635.0
 Num classes: 10
 1000 items
-Solution: 28378
-Loop count: 11447862120
-Time using: 180.0294 seconds
+Solution: 34812
+Loop count: 114473888119
+Time using: 1985.4677 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_11.txt
 Capacity: 11635.0
 Num classes: 10
 1000 items
-Solution: 28183
-Loop count: 12422901529
-Time using: 213.1266 seconds
+Solution: 34776
+Loop count: 124224064719
+Time using: 2331.898 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_11.txt
 Capacity: 11635.0
 Num classes: 10
 1000 items
-Solution: 28051
-Loop count: 13547948049
-Time using: 244.3433 seconds
+Solution: 34828
+Loop count: 135474049874
+Time using: 2692.15 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_11.txt
 Capacity: 11635.0
 Num classes: 10
 1000 items
-Solution: 28600
-Loop count: 14822976647
-Time using: 280.7541 seconds
+Solution: 35257
+Loop count: 148224030619
+Time using: 3053.7743 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_11.txt
 Capacity: 11635.0
 Num classes: 10
 1000 items
-Solution: 28170
-Loop count: 16248015582
-Time using: 309.177 seconds
+Solution: 35153
+Loop count: 162473915165
+Time using: 3365.1362 seconds
 Valid status: True
 
 /Users/david0403/Github/Knapsack_Problem_AI/INPUT_11.txt
 Capacity: 11635.0
 Num classes: 10
 1000 items
-Solution: 28800
-Loop count: 17823058492
-Time using: 343.3111 seconds
-Valid status: True
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Solution: 27664
-Loop count: 30932857277
-Time using: 350.3046 seconds
-Valid status: True
-

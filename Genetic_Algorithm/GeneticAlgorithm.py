@@ -1,10 +1,7 @@
 import random
-from math import sqrt
 
 loop_count = 0
 
-expoect_seconds = 1
-expoect_calc = int(10**8/6 * expoect_seconds)
 mutation_probability = 0.3
 population_size = 100
 
