@@ -21,9 +21,9 @@ log.write("Starting here!!!\n")
 
 plt.ioff()
 
-generation_init = 10
+generation_init = 25
 counting = 10
-step = 10
+step = 25
 
 for i in range(1,12):
 
@@ -97,7 +97,7 @@ for i in range(1,12):
     write_output(output_file, best_value, best_solution)
     chart.close()
 
-    info = "Test_" + str(i) + " - items: " + str(len(weights)) + " - class: " + str(num_classes)
+    info = "Test_" + str(i) + " - items: " + str(len(weights)) + " - class: " + str(num_classes) 
 
 
     axis[0].set_title("Miliseconds " + info)
