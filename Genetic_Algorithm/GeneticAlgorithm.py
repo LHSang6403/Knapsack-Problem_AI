@@ -191,11 +191,11 @@ def genetic(generations: int, W: int, m: int, wt: list, v: list, c: list) -> tup
 
     print("population:", population_size, ";generations:", generations)
 
-    max_val, best = generate_satisfied_chromosome()
-    if (max_val == 0):
+    best_fitness, best_choice = generate_satisfied_chromosome()
+    if (best_fitness == 0):
         return loop_count, 0, [0] * items_size
 
-    fitness_cum, population = generate_population(best, population_size)
+    fitness_cum, population = generate_population(best_choice, population_size)
 
     for _ in range(generations):
         new_population = []
@@ -222,8 +222,8 @@ def genetic(generations: int, W: int, m: int, wt: list, v: list, c: list) -> tup
         temp = population + new_population
         temp.sort(reverse=True)
         population = temp[:population_size]
-        if max_val < population[0][0]:
-            best = population[0][1]
-            max_val = population[0][0]
+        if best_fitness < population[0][0]:
+            best_choice = population[0][1]
+            best_fitness = population[0][0]
 
-    return loop_count, max_val, best
+    return loop_count, best_fitness, best_choice
